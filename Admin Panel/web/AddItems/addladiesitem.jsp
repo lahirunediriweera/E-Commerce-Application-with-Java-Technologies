@@ -9,12 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Add Items Ladies Section</title>
         <link rel="stylesheet" href="settings.css">
     </head>
     <body>
         <div class="container">
-        <h1>ADD NEW ITEM FOR GENTS SECTION</h1>
+        <h1>ADD NEW ITEM FOR LADIES SECTION</h1>
         <p></p>
         <form action="">
             <div class="row">
@@ -38,10 +38,11 @@
             <div class="row">
                 <div class="column">
                     <label for="Time">Time</label>
-                    <input type="time" id="Time" placeholder="Time here">
+                    <input type="number" id="Time" placeholder="Amount here">
                 </div>
                 <div class="column">
-
+                    <label for="propic">Profile Photo</label>
+                    <input type="file">
                 </div>
             </div>
             <div class="row">

@@ -15,8 +15,7 @@
     <body>
         <div class="container">
         <h1>ADD NEW ITEM FOR GENTS SECTION</h1>
-        <p></p>
-        <form action="">
+          <p></p>
             <div class="row">
                 <div class="column">
                     <label for="name">Item ID</label>

@@ -72,20 +72,7 @@ public class addgenitemServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        int id = Integer.parseInt(request.getParameter("id"));
-        String name = request.getParameter("name");
-        String description = request.getParameter("description");
-        String price = request.getParameter("price");
-        String amount = request.getParameter("amount");
-        String picture = request.getParameter("itempic");
-        
-        PrintWriter out = response.getWriter();
-        out.println("This Item Added Gents Section Successfully....");
-        
-        Gents b = new Gents();
-        b.insertGents(id,name,description,price,amount,picture);
-        //processRequest(request, response);
+        processRequest(request, response);
     }
 
     /**

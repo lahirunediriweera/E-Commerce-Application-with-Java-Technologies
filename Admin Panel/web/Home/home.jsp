@@ -25,21 +25,21 @@
                     
                     <li>
                         <a href="#">
-                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="icon"><ion-icon name="home"></ion-icon></span>
                             <span class="title">Dashboard</span>
                         </a>
                     </li>
                     
                     <li>
                         <a href="#">
-                            <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="icon"><ion-icon name="people"></ion-icon></ion-icon></span>
                             <span class="title">Customer</span>
                         </a>
                     </li>
                     
                     <li>
                         <a href="#">
-                            <span class="icon"><ion-icon name="storefront"></ion-icon></span>
+                            <span class="icon"><ion-icon name="file-tray-full"></ion-icon></span>
                             <span class="title">View Orders</span>
                         </a>
                     </li>
@@ -67,14 +67,14 @@
                     
                     <li>
                         <a href="#">
-                            <span class="icon"><ion-icon name="storefront"></ion-icon></span>
+                            <span class="icon"><ion-icon name="settings"></ion-icon></span>
                             <span class="title">Admin Setting</span>
                         </a>
                     </li>
                     
                     <li>
                         <a href="#">
-                            <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                            <span class="icon"><ion-icon name="log-out"></ion-icon></span>
                             <span class="title">Log Out</span>
                         </a>
                     </li>
@@ -97,44 +97,44 @@
                     <div class="card">
                         <div>
                             <div class="numbers">1,504</div>
-                            <div class="cardName">Daily Views</div>
+                            <div class="cardName">Total Orders</div>
                         </div>
                         
                         <div class="iconBx">
-                            xxx
+                            <ion-icon name="bag-handle"></ion-icon>
                         </div>
                     </div>
                     
                     <div class="card">
                         <div>
                             <div class="numbers">1,504</div>
-                            <div class="cardName">Daily Views</div>
+                            <div class="cardName">Total Customers</div>
                         </div>
                         
                         <div class="iconBx">
-                            xxx
+                            <ion-icon name="people"></ion-icon>
                         </div>
                     </div>
                     
                     <div class="card">
                         <div>
                             <div class="numbers">1,504</div>
-                            <div class="cardName">Daily Views</div>
+                            <div class="cardName">Total Items</div>
                         </div>
                         
                         <div class="iconBx">
-                            xxx
+                            <ion-icon name="shirt"></ion-icon>
                         </div>
                     </div>
                     
                     <div class="card">
                         <div>
                             <div class="numbers">1,504</div>
-                            <div class="cardName">Daily Views</div>
+                            <div class="cardName">Total Visits</div>
                         </div>
                         
                         <div class="iconBx">
-                            xxx
+                            <ion-icon name="eye"></ion-icon>
                         </div>
                     </div>
                 </div>

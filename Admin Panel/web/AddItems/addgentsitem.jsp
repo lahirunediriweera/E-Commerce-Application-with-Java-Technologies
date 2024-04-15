@@ -19,6 +19,7 @@
         <form action="">
             <div class="row">
                 <div class="column">
+<<<<<<< Updated upstream
                     <label for="name">Item ID</label>
                     <input type="text" id="name" placeholder="ID here">
                 </div>
@@ -32,16 +33,39 @@
                 </div>
                 <div class="column">
                     <label for="Day">Price</label>
+=======
+                    <label for="id">Item ID</label>
+                    <input type="number" id="name" placeholder="ID here">
+                </div>
+                <div class="column">
+                    <label for="name">Name</label>
+                    <input type="text" id="Day" placeholder="Name here">
+                </div>
+                <div class="column">
+                    <label for="description">Description</label>
+                    <input type="text" id="Day" placeholder="Details here">
+                </div>
+                <div class="column">
+                    <label for="price">Price</label>
+>>>>>>> Stashed changes
                     <input type="text" id="Day" placeholder="Price here">
                 </div>
             </div>
             <div class="row">
                 <div class="column">
+<<<<<<< Updated upstream
                     <label for="Time">Time</label>
                     <input type="number" id="Time" placeholder="Amount here">
                 </div>
                 <div class="column">
                     <label for="propic">Profile Photo</label>
+=======
+                    <label for="amount">Amount</label>
+                    <input type="number" id="Time" placeholder="Amount here">
+                </div>
+                <div class="column">
+                    <label for="itempic">Item Picture</label>
+>>>>>>> Stashed changes
                     <input type="file">
                 </div>
             </div>

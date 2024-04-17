@@ -182,23 +182,23 @@ button{
     background: #000000;
 }
 .btn{
-    display: inline;
+    display: inline-flexbox;
     background-color: #000080;
     cursor: pointer;
     color: #ffffff;
-    margin-top: 1rem;
-    font-size: 1rem;
+    
+    font-size: 0.5rem;
     padding: 0.2rem 1.2rem;
     background: #000080;
     font-weight: bold;
-    width: 100%;
+    width: 100px;
     text-align: center;
-    right: 50px;
-    margin-left: 5px;
-    border-radius: 0.5rem;
+    
 }
 
 .btns :hover{
     background: #ffffff;
 }
+
+
 

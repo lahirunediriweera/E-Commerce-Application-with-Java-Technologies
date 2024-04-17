@@ -54,8 +54,10 @@
                     <td><%=rs.getString("price")%></td>
                     <td><%=rs.getInt("amount")%></td>
                     <td>
-                        <a href="" class="btn"> <i class="fas fa-edit"></i> Edit </a>
-                        <a href="" class="btn"> <i class="fas fa-trash"></i> Delete </a>
+                        <form action="DeleteGent" method="post">
+                            <input type="hidden" name="bookid" value="<%=rs.getInt("id")%>">
+                            <input type="submit" class="btn" value="Delete">
+                        </form>
                     </td>
                 </tr>
                 

@@ -26,7 +26,7 @@ class Gents {
     Statement st;
     void insertGents(int id, String name, String description, String price, String amount, String picture) {
             connectToDB();
-            String query ="INSERT INTO books VALUES("+id+",'"+name+"','"+description+"','"+price+"','"+amount+"','"+picture+"')";    
+            String query ="INSERT INTO gents VALUES("+id+",'"+name+"','"+description+"','"+price+"','"+amount+"','"+picture+"')";    
             try {
                 st.executeUpdate(query);
                 System.out.println("Record inserted");
@@ -38,7 +38,7 @@ class Gents {
     
     private void connectToDB() {
         String driver= "com.mysql.jdbc.Driver";
-        String url="jdbc:mysql://localhost:3306/shop";
+        String url="jdbc:mysql://localhost:3306/testshop";
         try {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, "root", "");

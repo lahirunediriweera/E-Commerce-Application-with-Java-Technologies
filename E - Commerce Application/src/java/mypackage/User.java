@@ -34,9 +34,6 @@ public class User {
                 ps.setString(5, email);
                 ps.setString(6, pwd);
                 ps.setString(7, cpwd);
-                
-                System.out.println("Record inserted");
-                
  
             }catch (SQLException ex) {
                 System.out.println(ex.getMessage());           

@@ -4,17 +4,23 @@
     Author     : USER
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Ladies Item</title>
-        <link rel="stylesheet" href="view.css">
+        <link rel="stylesheet" href="css/views.css">
     </head>
     <body>
+        <h1>Kids Items Section</h1>
     <div class="container">
-
+        <a href="home.jsp"><input type="submit" value="Back" class="sbtn"></a>
+        <a href="addladiesitem.jsp"><input type="submit" value="Add New" class="sbtn"></a>
     <div class="product-display">
       <table class="product-display-table">
          <thead>
@@ -24,32 +30,36 @@
             <th>name</th>
             <th>description</th>
             <th>price</th>
+            <th>amount</th>
             <th>action</th>
          </tr>
          </thead>
          
-         <tr>
-            <td>0001528</td>
-            <td><img src="" height="100" alt="">Add a Picture of the Item</td>
-            <td>POLO T Shirt</td>
-            <td>Description of the item</td>
-            <td>Rs 5499.00</td>
-            <td>
-               <a href="" class="btn"> <i class="fas fa-edit"></i> edit </a>
-               <a href="" class="btn"> <i class="fas fa-trash"></i> delete </a>
-            </td>
-         </tr>
-         <tr>
-            <td>0001528</td>
-            <td><img src="" height="100" alt="">Add a Picture of the Item</td>
-            <td>POLO T Shirt</td>
-            <td>Description of the item</td>
-            <td>Rs 5499.00</td>
-            <td>
-               <a href="" class="btn"> <i class="fas fa-edit"></i> edit </a>
-               <a href="" class="btn"> <i class="fas fa-trash"></i> delete </a>
-            </td>
-         </tr>
+         <%
+                String url = "jdbc:mysql://localhost:3306/shop";
+                String query = "SELECT * FROM ladies";
+                
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection con = DriverManager.getConnection(url, "root", "");
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(query);
+                
+                while(rs.next()) { %>
+                
+                <tr>
+                    <td><%=rs.getInt("id")%></td>
+                    <td><%=rs.getString("picture")%></td>
+                    <td><%=rs.getString("name")%></td>
+                    <td><%=rs.getString("description")%></td>
+                    <td><%=rs.getString("price")%></td>
+                    <td><%=rs.getInt("amount")%></td>
+                    <td>
+                        <a href="" class="btn"> <i class="fas fa-edit"></i> Edit </a>
+                        <a href="" class="btn"> <i class="fas fa-trash"></i> Delete </a>
+                    </td>
+                </tr>
+                
+                <% } %>
       </table>
     </div>
     </div>

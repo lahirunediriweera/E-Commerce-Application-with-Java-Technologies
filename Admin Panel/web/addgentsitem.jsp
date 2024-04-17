@@ -41,7 +41,7 @@
                     <input type="number" id="amount" name="amount" placeholder="Amount here">
                 </div>
                 <div class="column">
-                    <label for="itempic">Item Photo</label>
+                    <label for="itempic">Item Image</label>
                     <input type="file" name="itempic">
                 </div>
             </div>

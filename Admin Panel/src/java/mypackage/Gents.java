@@ -26,7 +26,7 @@ class Gents {
     Statement st;
     void insertGents(int id, String name, String description, String price, String amount, String picture) {
             connectToDB();
-            String query ="INSERT INTO gents VALUES("+id+",'"+name+"','"+description+"','"+price+"','"+amount+"','"+picture+"')";    
+            String query ="INSERT INTO gentss VALUES("+id+",'"+name+"','"+description+"','"+price+"','"+amount+"','"+picture+"')";    
             try {
                 st.executeUpdate(query);
                 System.out.println("Record inserted");

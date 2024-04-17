@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="container">
-        <h1>ADD NEW ITEM FOR GENTS SECTION</h1>
+        <h1>ADD NEW ITEM FOR GENTSss SECTION</h1>
         <p></p>
         <form action="GentServlet" method="POST">
             <div class="row">

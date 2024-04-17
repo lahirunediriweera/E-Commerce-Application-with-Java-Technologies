@@ -81,7 +81,7 @@ public class KidServlet extends HttpServlet {
         String picture = request.getParameter("itempic");
         
         PrintWriter out = response.getWriter();
-        out.println("This Item Added Gents Section Successfully....");
+        out.println("This Item Added Kids Section Successfully....");
         
         Kids b = new Kids();
         b.insertKids(id,name,description,price,amount,picture);

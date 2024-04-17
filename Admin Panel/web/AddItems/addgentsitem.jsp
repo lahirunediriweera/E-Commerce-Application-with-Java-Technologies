@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add Items Gents Section</title>
+        <title>Add Items Kids Section</title>
         <link rel="stylesheet" href="settings.css">
     </head>
     <body>
@@ -20,29 +20,29 @@
             <div class="row">
                 <div class="column">
                     <label for="name">Item ID</label>
-                    <input type="text" id="name" placeholder="ID here">
+                    <input type="text" id="id" name="id" placeholder="ID here">
                 </div>
                 <div class="column">
-                    <label for="Day">Name</label>
-                    <input type="text" id="Day" placeholder="Name here">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name here">
                 </div>
                 <div class="column">
-                    <label for="Day">Description</label>
-                    <input type="text" id="Day" placeholder="Details here">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description" placeholder="Details here">
                 </div>
                 <div class="column">
-                    <label for="Day">Price</label>
-                    <input type="text" id="Day" placeholder="Price here">
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" placeholder="Price here">
                 </div>
             </div>
             <div class="row">
                 <div class="column">
-                    <label for="Time">Time</label>
-                    <input type="number" id="Time" placeholder="Amount here">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" name="amount" placeholder="Amount here">
                 </div>
                 <div class="column">
-                    <label for="propic">Profile Photo</label>
-                    <input type="file">
+                    <label for="itempic">Item Photo</label>
+                    <input type="file" name="itempic">
                 </div>
             </div>
             <div class="row">
@@ -50,7 +50,6 @@
                 <a href="doctorshedule.html"><input type="button" value="Back" class="btn"></a>
                 <input type="reset" value="Reset" class="btn">
                 <input type="submit" value="Submit" class="btn">
-                <input type="submit" value="Update" class="btn">
                 </div>
             </div>
         </form>

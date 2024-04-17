@@ -10,13 +10,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add Items Kids Section</title>
-        <link rel="stylesheet" href="settings.css">
+        <link rel="stylesheet" href="css/settings.css">
     </head>
     <body>
         <div class="container">
         <h1>ADD NEW ITEM FOR GENTS SECTION</h1>
         <p></p>
-        <form action="">
+        <form action="GentServlet" method="POST">
             <div class="row">
                 <div class="column">
                     <label for="name">Item ID</label>

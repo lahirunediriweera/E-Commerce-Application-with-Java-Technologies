@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author USER
  */
-@WebServlet(name = "addgenitemServlet", urlPatterns = {"/addgenitemServlet"})
-public class addgenitemServlet extends HttpServlet {
+@WebServlet(name = "GentServlet", urlPatterns = {"/GentServlet"})
+public class GentServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +37,10 @@ public class addgenitemServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet addgenitemServlet</title>");            
+            out.println("<title>Servlet GentServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet addgenitemServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet GentServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -77,6 +77,7 @@ public class addgenitemServlet extends HttpServlet {
         String name = request.getParameter("name");
         String description = request.getParameter("description");
         String price = request.getParameter("price");
+<<<<<<< Updated upstream:Admin Panel/src/java/mypackage/addgenitemServlet.java
         String amount = request.getParameter("amount");
         String picture = request.getParameter("itempic");
         
@@ -85,6 +86,17 @@ public class addgenitemServlet extends HttpServlet {
         
         Gents b = new Gents();
         b.insertGents(id,name,description,price,amount,picture);
+=======
+        int amount = Integer.parseInt(request.getParameter("amount"));
+        String picture = request.getParameter("itempic");
+        
+        PrintWriter out = response.getWriter();
+        out.println("Book Added Successfully....");
+        
+        InsertGent b = new InsertGent();
+        b.insertGent(id,name,description,price,amount,picture);
+        
+>>>>>>> Stashed changes:Admin Panel/src/java/mypackage/GentServlet.java
         //processRequest(request, response);
     }
 

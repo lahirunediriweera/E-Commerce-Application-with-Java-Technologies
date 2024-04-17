@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Panel</title>
-        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="css/home.css">
     </head>
     <body>
         <div class="container">
@@ -89,7 +89,7 @@
                     </div>
 
                     <div class="user">
-                        <img src="13245.jpg" alt="">
+                        <img src="css/13245.jpg" alt="">
                     </div>
                 </div>
                 

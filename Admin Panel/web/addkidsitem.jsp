@@ -16,7 +16,7 @@
         <div class="container">
         <h1>ADD NEW ITEM FOR KIDS SECTION</h1>
         <p></p>
-        <form action="">
+        <form action="addgenitemServlet" method="POST">
             <div class="row">
                 <div class="column">
                     <label for="name">Item ID</label>

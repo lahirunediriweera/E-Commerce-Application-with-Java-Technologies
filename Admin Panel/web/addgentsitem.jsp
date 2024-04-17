@@ -9,13 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add Items Kids Section</title>
-        <link rel="stylesheet" href="settings.css">
+        <title>Add Items Gents Section</title>
+        <link rel="stylesheet" href="AddItems/settings.css">
     </head>
     <body>
         <div class="container">
         <h1>ADD NEW ITEM FOR GENTS SECTION</h1>
+<<<<<<< Updated upstream:Admin Panel/web/AddItems/addgentsitem.jsp
           <p></p>
+=======
+        <p></p>
+        <form action="GentServlet" method="POST">
+>>>>>>> Stashed changes:Admin Panel/web/addgentsitem.jsp
             <div class="row">
                 <div class="column">
                     <label for="name">Item ID</label>
@@ -46,7 +51,7 @@
             </div>
             <div class="row">
                 <div class="c">
-                <a href="doctorshedule.html"><input type="button" value="Back" class="btn"></a>
+                <a href=""><input type="button" value="Back" class="btn"></a>
                 <input type="reset" value="Reset" class="btn">
                 <input type="submit" value="Submit" class="btn">
                 </div>

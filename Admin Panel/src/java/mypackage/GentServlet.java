@@ -77,7 +77,6 @@ public class GentServlet extends HttpServlet {
         String name = request.getParameter("name");
         String description = request.getParameter("description");
         String price = request.getParameter("price");
-<<<<<<< Updated upstream:Admin Panel/src/java/mypackage/addgenitemServlet.java
         String amount = request.getParameter("amount");
         String picture = request.getParameter("itempic");
         
@@ -86,17 +85,6 @@ public class GentServlet extends HttpServlet {
         
         Gents b = new Gents();
         b.insertGents(id,name,description,price,amount,picture);
-=======
-        int amount = Integer.parseInt(request.getParameter("amount"));
-        String picture = request.getParameter("itempic");
-        
-        PrintWriter out = response.getWriter();
-        out.println("Book Added Successfully....");
-        
-        InsertGent b = new InsertGent();
-        b.insertGent(id,name,description,price,amount,picture);
-        
->>>>>>> Stashed changes:Admin Panel/src/java/mypackage/GentServlet.java
         //processRequest(request, response);
     }
 

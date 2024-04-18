@@ -16,7 +16,7 @@
         <div class="background">
         <div class="registercontainer"><center>
             <h1>Register</h1>
-            <form action="SignUpservlet" method="POST">
+            <form action="SignUpServlet" method="POST">
             <table border="0">
                 <tbody>
                     <tr>

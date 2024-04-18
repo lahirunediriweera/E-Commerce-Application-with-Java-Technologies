@@ -38,7 +38,7 @@
                     </li>
                     
                     <li>
-                        <a href="#">
+                        <a href="vieworders.jsp">
                             <span class="icon"><ion-icon name="file-tray-full"></ion-icon></span>
                             <span class="title">View Orders</span>
                         </a>

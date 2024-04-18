@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Sign-Up</title>
-     <link rel="stylesheet" href="SignUp.css"> 
+        <link rel="stylesheet" href="CSS/signup.css"> 
     </head>
     <body>
         <div class="background">

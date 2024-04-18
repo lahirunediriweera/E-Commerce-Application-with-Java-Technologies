@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Panel</title>
-        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="css/home.css">
     </head>
     <body>
         <div class="container">
@@ -45,21 +45,21 @@
                     </li>
                     
                     <li>
-                        <a href="#">
+                        <a href="Gents.jsp">
                             <span class="icon"><ion-icon name="storefront"></ion-icon></span>
                             <span class="title">Gents Sec Setting</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="#">
+                        <a href="ladies.jsp">
                             <span class="icon"><ion-icon name="storefront"></ion-icon></span>
                             <span class="title">Ladies Sec Setting</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="#">
+                        <a href="kids.jsp">
                             <span class="icon"><ion-icon name="storefront"></ion-icon></span>
                             <span class="title">Kids Sec Setting</span>
                         </a>

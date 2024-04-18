@@ -31,7 +31,7 @@
                     </li>
                     
                     <li>
-                        <a href="#">
+                        <a href="customer.jsp">
                             <span class="icon"><ion-icon name="people"></ion-icon></ion-icon></span>
                             <span class="title">Customer</span>
                         </a>

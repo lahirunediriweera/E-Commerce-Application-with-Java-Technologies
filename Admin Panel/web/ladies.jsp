@@ -17,8 +17,8 @@
         <link rel="stylesheet" href="css/views.css">
     </head>
     <body>
-        <h1>Kids Items Section</h1>
     <div class="container">
+        <h1>Ladies Items Section</h1>
         <a href="home.jsp"><input type="submit" value="Back" class="sbtn"></a>
         <a href="addladiesitem.jsp"><input type="submit" value="Add New" class="sbtn"></a>
     <div class="product-display">
@@ -54,8 +54,11 @@
                     <td><%=rs.getString("price")%></td>
                     <td><%=rs.getInt("amount")%></td>
                     <td>
-                        <a href="" class="btn"> <i class="fas fa-edit"></i> Edit </a>
-                        <a href="" class="btn"> <i class="fas fa-trash"></i> Delete </a>
+                        <%--<button class="btn" onclick="openEditPopup('<%=rs.getInt("id")%>', '<%=rs.getString("name")%>', '<%=rs.getString("description")%>', '<%=rs.getString("price")%>')">Update</button>--%>
+                        <form action="DeleteLady" method="post">
+                            <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
+                            <input type="submit" class="btn" value="Delete">
+                        </form>
                     </td>
                 </tr>
                 

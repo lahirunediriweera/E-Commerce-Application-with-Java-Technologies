@@ -14,11 +14,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Gents Item</title>
-        <link rel="stylesheet" href="css/views.css">
+        <link rel="stylesheet" href="css/view.css">
     </head>
     <body>
+        <div class="container"><br>
         <h1>Gents Items Section</h1>
-    <div class="container">
         <a href="home.jsp"><input type="submit" value="Back" class="sbtn"></a>
         <a href="addgentsitem.jsp"><input type="submit" value="Add New" class="sbtn"></a>
     <div class="product-display">
@@ -54,8 +54,9 @@
                     <td><%=rs.getString("price")%></td>
                     <td><%=rs.getInt("amount")%></td>
                     <td>
+                        <%--<button class="btn" onclick="openEditPopup('<%=rs.getInt("id")%>', '<%=rs.getString("name")%>', '<%=rs.getString("description")%>', '<%=rs.getString("price")%>')">Update</button>--%>
                         <form action="DeleteGent" method="post">
-                            <input type="hidden" name="bookid" value="<%=rs.getInt("id")%>">
+                            <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
                             <input type="submit" class="btn" value="Delete">
                         </form>
                     </td>

@@ -47,9 +47,9 @@
             </div>
             <div class="row">
                 <div class="c">
-                <a><input type="button" value="Back" class="btn"></a>
-                <input type="reset" value="Reset" class="btn">
-                <input type="submit" value="Submit" class="btn">
+                    <a href="kids.jsp"><input type="button" value="Back" class="btn"></a>
+                    <input type="reset" value="Reset" class="btn">
+                    <input type="submit" value="Submit" class="btn">
                 </div>
             </div>
         </form>

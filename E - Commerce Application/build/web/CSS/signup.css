@@ -1,0 +1,73 @@
+body{
+    background-image: url(../Image/Register.jpg);
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;   
+}
+
+
+.registercontainer {
+    border: 2px solid;
+    padding: 30px; 
+    margin-top: 100px; 
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 0px;
+    background: linear-gradient(to bottom,#004cff, #00c4fc, #00bdfa, #00b5f7,  #00adf5, #00a6f2, #009ef0, #0096ed, #008feb,  #0087e8, #0080e6, #0078e3, #0070e0, #0069de, #0061db,  #0059d9, #0052d6); 
+    filter: brightness(130%);
+}
+h1{
+    padding-top: 2px;
+    margin-top: 5px;
+    font-size: 325%;
+    color:#000000;
+    font-weight: bold;
+}
+#reset,#submit{
+    margin-top: 25px;
+    margin-left: 110px;
+    margin-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 85%;
+    font-weight: bold;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+}
+#reset:hover{
+    background-color:#00437f;
+    color:whitesmoke;
+}
+#submit:hover{
+    background-color:#00437f;
+    color:whitesmoke;    
+}
+#reset:active{
+  transform: translateY(4px);
+}
+#submit:active{
+    transform: translateY(2px);
+}
+tr{
+    column-width: 70px;
+    font-size: 120%;
+}
+th{
+    padding-left: 60px;
+    text-align: left;
+    font-weight: bold;
+}
+table{   
+    width: 100%;
+}
+th,td{  
+    height:40px;
+}
+td{
+    
+}

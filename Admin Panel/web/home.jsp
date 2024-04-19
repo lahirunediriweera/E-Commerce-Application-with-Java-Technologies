@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Panel</title>
-        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/newhome.css">
     </head>
     <body>
         <div class="container">
@@ -24,7 +24,7 @@
                     </li>
                     
                     <li>
-                        <a href="#">
+                        <a href="home.jsp">
                             <span class="icon"><ion-icon name="home"></ion-icon></span>
                             <span class="title">Dashboard</span>
                         </a>
@@ -85,11 +85,11 @@
             <div class="main">
                 <div class="topbar">
                     <div class="toggle">
-                        <ion-icon name="menu-outline"></ion-icon>
+                        
                     </div>
 
                     <div class="user">
-                        <img src="13245.jpg" alt="">
+                        <h2><%= new java.util.Date() %> </h2>
                     </div>
                 </div>
                 
@@ -143,7 +143,7 @@
                     <div class="recentOrders">
                         <div class="cardHeaders">
                             <h2>Recent Orders</h2>
-                            <a href="#" class="btn">View All</a>
+                            <a href="vieworders.jsp" class="btn">View All</a>
                         </div>
                         
                         <table>

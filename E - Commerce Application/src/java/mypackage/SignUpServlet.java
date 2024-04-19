@@ -72,6 +72,8 @@ public class SignUpServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html");
+        
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String address = request.getParameter("address");
@@ -81,10 +83,87 @@ public class SignUpServlet extends HttpServlet {
         String cpwd = request.getParameter("cpwd");
         
         PrintWriter out = response.getWriter();
+        
+        
+        // Validate fname
+        if(fname== null || fname.length()== 0 || fname.equals(" ")){
+            out.println("<h4 style='color:red'>First Name is required.</h4>");
+            return;
+        }
+        else if(fname.length()>15){
+            out.println("<h4 style='color:red'>First Name must have maximum 15 characters.</h4>");
+            return;
+        }
+        
+        //validate lname
+        if(lname== null || lname.length()== 0 || lname.equals(" ")){
+            out.println("<h4 style='color:red'> Last Name is required.</h4>");
+            return;
+        }
+        else if(lname.length()>25){
+            out.println("<h4 style='color:red'>"+"Last Name must have maximum 25 characters."+"</h4>");
+            return;
+        }
+        
+        //validate address
+        if(address== null || address.length()== 0 || address.equals(" ")){
+            out.println("<h4 style='color:red'> Address is required.</h4>");
+            return;
+        }
+        else if(address.length()>125){
+            out.println("<h4 style='color:red'> Address must have maximum 125 characters.</h4>");
+            return;
+        }
+        
+        //Validate ContactNo
+        
+        //Validate Email
+        if(email== null || email.length()== 0 || email.equals(" ")){
+            out.println("<h4 style='color:red'> Email is required.</h4>");
+            return;
+        }
+        else 
+            try{
+                if(email.length()>75){
+                    out.println("<h4 style='color:red'> Email Address must have maximum 75 characters.</h4>");
+                    return;
+                }
+            }
+            catch(Exception ex){
+                if(!email.equals("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$")){
+                    out.println("<h4 style='color:red'> Invalid Email Address.");
+                    return;
+                }
+            }
+        
+        //Validate Password
+        if(pwd== null || pwd.length()== 0 || pwd.equals(" ")){
+            out.println("<h4 style='color:red'> Password is required.</h4>");
+            return;
+        }
+        else if(pwd.length()<8){
+            out.println("<h4 style='color:red'> Password must have minimum 8 characters.</h4>");
+            return;
+        }
+        else if(pwd.length()>15){
+            out.println("<h4 style='color:red'> Password must have maximum 15 characters.</h4>");
+            return;
+        }
+        
+        //Validate Comfirm Password
+        if(cpwd== null || cpwd.length()== 0 || cpwd.equals(" ")){
+            out.println("<h4 style='color:red'> Enter the password again</h4>");
+            return;
+        }
+        else if(!pwd.equals(cpwd)){
+            out.println("<h4 style='color:red'> Confirm password is does not match</h4>");
+            return;           
+        }
+        out.close();
+        
         out.println("Record inserted");
         User us = new User();
-        us.insertUser(fname,lname,address,contactno,email,pwd,cpwd);   
-        
+        us.insertUser(fname,lname,address,contactno,email,pwd,cpwd);
         //processRequest(request, response);
     }
 

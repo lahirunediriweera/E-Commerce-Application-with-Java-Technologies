@@ -73,17 +73,17 @@ public class SignUpServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html");
-        
+ 
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String address = request.getParameter("address");
-        int contactno = Integer.parseInt(request.getParameter("contactno"));
+        String contact = request.getParameter("contactno");
         String email = request.getParameter("email");
         String pwd = request.getParameter("pwd");
         String cpwd = request.getParameter("cpwd");
-        
+        int contactno;
+
         PrintWriter out = response.getWriter();
-        
         
         // Validate fname
         if(fname== null || fname.length()== 0 || fname.equals(" ")){
@@ -116,6 +116,27 @@ public class SignUpServlet extends HttpServlet {
         }
         
         //Validate ContactNo
+        if(contact== null || contact.length()== 0 || contact.equals(" ")){
+            out.println("<h4 style='color:red'> Contact Number is required.</h4>");
+            return;
+        }
+        else if(contact.length()> 10){
+            out.println("<h4 style='color:red'>Contact Number must be 10 digits.</h4>");
+            return; 
+        }      
+        else if (contact.length()< 10) {
+                   out.println("<h4 style='color:red'>Contact Number must be 10 digits.</h4>");
+                    return; 
+        }
+        else{
+            try {  
+                contactno = Integer.parseInt(contact);
+            } 
+            catch(NumberFormatException nfe) {
+                out.println("<h4 style='color:red'>Contact Number must be numeric.</h4>");
+                return; 
+            }
+        }
         
         //Validate Email
         if(email== null || email.length()== 0 || email.equals(" ")){
@@ -159,11 +180,11 @@ public class SignUpServlet extends HttpServlet {
             out.println("<h4 style='color:red'> Confirm password is does not match</h4>");
             return;           
         }
-        out.close();
-        
-        out.println("Record inserted");
+  
+        out.println("<h2 style='color:green'>successfully registered.");
         User us = new User();
         us.insertUser(fname,lname,address,contactno,email,pwd,cpwd);
+        out.close();
         //processRequest(request, response);
     }
 

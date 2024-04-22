@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 20, 2024, 9:53:49 PM
+    Author     : wiman
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+.container{
+    width: 100%;
+    height: 90px;
+    background:linear-gradient(to right,#004cff, #00c4fc, #00bdfa, #00b5f7,  #00adf5, #00a6f2, #009ef0, #0096ed, #008feb,  #0087e8, #0080e6, #0078e3, #0070e0, #0069de, #0061db,  #0059d9, #0052d6);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px
+}
+nav{
+    flex:1;
+    align-items: center;   
+}
+nav ul li{
+    float: left;
+    text-decoration: none;
+    list-style: none;
+    padding: 20px;
+    font-size: 20px;
+    
+}
+ul li a:hover{
+    background-color:#38007d;   
+}
+li a{
+    color: white;
+    text-decoration: none;
+}
+li.rightcorner{
+  float: right;
+}
+.slide img{
+    width: 100%;
+    height: 620px;   
+}
+.card{
+    margin:80px;
+    padding-top: 20px;
+    width:420px;
+    height: 250px;
+        
+}
+.card col-md-4 img{
+    width:100px;
+    height: 120px;
+}

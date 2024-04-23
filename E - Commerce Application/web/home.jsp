@@ -39,29 +39,28 @@
             
             <div class="row">
                 <div class="column1">
-                    <div class="card col-md-4"> <img class="card-img-top" src="Image/slide1.jpeg" alt="Card1" width="100px" height="120px">
-                        <div class="card-body">
-                            <h3 class="card-title">Ladies Section</h3>
-                            <a href="#" class="btn btn-primary">Shop Now</a> 
-                        </div>
+                    <div class="card1">
+                        <img class="card-img1" src="Image/ladiessection.jpg" alt="Card1" width="100px" height="120px">
+                        <h3 class="card-title">Ladies Section</h3>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
-                <div class="card col-md-4"> <img class="card-img-top" src="Image/slide2.png" alt="Card2" width="100px" height="120px">
-                        <div class="card-body">
-                            <h3 class="card-title">Gents Section</h3>
-                            <a href="#" class="btn btn-primary">Shop Now</a>
-                        </div>
-                    </div>
-            </div>
-  
                 <div class="column2">
-                    <div class="card col-md-4"> <img class="card-img-top" src="Image/slide3.jpg" alt="Card3" width="100px" height="120px">
-                        <div class="card-body">
-                            <h3 class="card-title">Kids Section</h3>
-                            <a href="#" class="btn btn-primary">Shop Now</a>
-                        </div>
+                    <div class="card2">
+                        <img class="card-img2" src="Image/kidssection.jpg" alt="Card2" width="100px" height="120px">
+                        <h3 class="card-title">Kids Section</h3>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
+                <div class="column1">
+                    <div class="card1">
+                        <img class="card-img3" src="Image/gentssection.jpg" alt="Card3" width="100px" height="120px">
+                        <h3 class="card-title">Gents Section</h3>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+               
         </div>
     </body>
 </html>

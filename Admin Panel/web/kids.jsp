@@ -21,6 +21,7 @@
         <h1>Kids Items Section</h1>
         <a href="home.jsp"><input type="submit" value="Back" class="sbtn"></a>
         <a href="addkidsitem.jsp"><input type="submit" value="Add New" class="sbtn"></a>
+        <a href="updatekids.jsp"><input type="submit" value="Update" class="sbtn"></a>
     <div class="product-display">
       <table class="product-display-table">
          <thead>

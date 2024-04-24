@@ -48,14 +48,66 @@ li.rightcorner{
     width: 100%;
     height: 620px;   
 }
-.card{
-    margin:80px;
-    padding-top: 20px;
-    width:420px;
-    height: 250px;
-        
+.column1 {
+  float: left;
+  width: 25%;
+  padding: 10px 70px;
+  margin-right: 60px;
 }
-.card col-md-4 img{
-    width:100px;
-    height: 120px;
+.column2 {
+  float: right;
+  width: 25%;
+  padding: 10px 50px;
+  margin-right: 400px;
+}
+.row {
+    margin-top:50px;
+    margin: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-top:40px;
+  margin-left: 80px;
+  margin-bottom: 40px;
+  width:420px;
+  height: 470px;
+}
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-top: 200px;
+  margin-left: 80px;
+  margin-bottom: 40px;
+  width:500px;
+  height: 700px;
+}
+
+@media screen and (max-width: 400px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+img{
+    display: inline-block;
+    width:100%;        
+}
+.card1 img{
+    display: inline-block;
+    height: 400px;    
+}
+.card2 img{
+    display:inline-block;
+    height: 630px;
 }

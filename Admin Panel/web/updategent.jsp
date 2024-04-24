@@ -15,11 +15,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Update Item</title>
         <script>
-        function openEditPopup(bookId, name, author, price) {
-            document.getElementById('editBookId').value = bookId;
+        function openEditPopup(id, name, description, price, amount) {
+            document.getElementById('editId').value = id;
             document.getElementById('editName').value = name;
-            document.getElementById('editAuthor').value = author;
+            document.getElementById('editDescription').value = description;
             document.getElementById('editPrice').value = price;
+            document.getElementById('editAmount').value = amount;
             document.getElementById('editPopup').style.display = 'block';
         }
 
@@ -32,7 +33,8 @@
     </head>
     <body>
     <div class="container">
-        <a href="index.html"><input type="submit" value="Back" class="btn"></a>
+        <h1>Gents Items Update Section</h1>
+        <a href="Gents.jsp"><input type="submit" value="Back" class="btn"></a>
     <div class="product-display">
       <table class="product-display-table">
          <thead>
@@ -66,7 +68,7 @@
                 <td><%=rs.getInt("amount")%></td>
                 <td><%=rs.getString("picture")%></td>
                 <td>
-                    <button onclick="openEditPopup('<%=rs.getInt("id")%>', '<%=rs.getString("name")%>', '<%=rs.getString("description")%>', '<%=rs.getString("price")%>')">Update</button>
+                    <button onclick="openEditPopup('<%=rs.getInt("id")%>', '<%=rs.getString("name")%>', '<%=rs.getString("description")%>', '<%=rs.getString("price")%>', '<%=rs.getInt("amount")%>', '<%=rs.getString("picture")%>')">Update</button>
                 </td>
             </tr>
 
@@ -78,14 +80,18 @@
       <div id="editPopup" class="editPopup-content">
         <span class="close" onclick="closeEditPopup()">&times;</span>
         <h2>Edit Book Details</h2>
-        <form action="UpdateBook" method="post">
-            <input type="hidden" id="editBookId" name="bookid">
+        <form action="UpdateGentServlet" method="post">
+            <input type="hidden" id="editId" name="id">
             <label for="editName">Name:</label>
             <input type="text" id="editName" name="name"><br><br>
-            <label for="editAuthor">Author:</label>
-            <input type="text" id="editAuthor" name="author"><br><br>
+            <label for="editDescription">Description:</label>
+            <input type="text" id="editDescription" name="description"><br><br>
             <label for="editAuthor">Price:</label>
             <input type="text" id="editPrice" name="price"><br><br>
+            <label for="editAmount">Amount:</label>
+            <input type="text" id="editAmount" name="amount"><br><br>
+            <label for="editPicture">Image:</label>
+            <input type="file" id="editPicture" name="picture"><br><br>
             <input name="btn" type="submit" value="Update">
         </form>
     </div>

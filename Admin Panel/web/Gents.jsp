@@ -21,6 +21,7 @@
         <h1>Gents Items Section</h1>
         <a href="home.jsp"><input type="submit" value="Back" class="sbtn"></a>
         <a href="addgentsitem.jsp"><input type="submit" value="Add New" class="sbtn"></a>
+        <a href="updategent.jsp"><input type="submit" value="Update" class="sbtn"></a>
     <div class="product-display">
       <table class="product-display-table">
          <thead>

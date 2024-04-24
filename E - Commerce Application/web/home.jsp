@@ -12,7 +12,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>HomePage</title>
         <link rel="stylesheet" href="CSS/home.css">
-        <script type="text/javascript" src="home.js"></script>
     </head>
     <body>
         <div class="container">

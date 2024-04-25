@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -76,11 +77,23 @@ public class LoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String pwd = request.getParameter("password");
         
+        System.out.println("email" + email);
+        System.out.println("password" + pwd);
+        
+        
+        if (email != null && email.equalsIgnoreCase("admin@gmail.com") && pwd != null && pwd.equalsIgnoreCase("admin")){
+            
+        HttpSession httpSession = request.getSession();
+        
+        httpSession.setAttribute("email", email);
+        request.getRequestDispatcher("home.jsp").forward(request, response);
+        
+        
         Login lg=new Login();
         
         //processRequest(request, response);
     }
-
+    }
     /**
      * Returns a short description of the servlet.
      *
@@ -92,3 +105,4 @@ public class LoginServlet extends HttpServlet {
     }// </editor-fold>
 
 }
+

@@ -88,8 +88,19 @@ public class LoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         
+        System.out.println("email" + email);
+        System.out.println("password" + password);
         
-        try {
+        if (email != null && email.equalsIgnoreCase("admin@gmail.com") && password != null && password.equalsIgnoreCase("admin")) {
+            
+            HttpSession httpSession = request.getSession();
+            
+            httpSession.setAttribute("emailId", email);
+            request.getRequestDispatcher("home.jsp").forward(request, response);
+        }
+        
+        
+        /*try {
             Connection conn = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
             
             // Query to check if the user exists in the database
@@ -116,6 +127,6 @@ public class LoginServlet extends HttpServlet {
         } catch (SQLException ex) {
             ex.printStackTrace();
             // Handle SQL exception here
-        }
+        }*/
     }
 }

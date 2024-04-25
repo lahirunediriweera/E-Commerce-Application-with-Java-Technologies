@@ -77,10 +77,12 @@
                     </li>
                     
                     <li>
-                        <a href="#">
-                            <span class="icon"><ion-icon name="log-out"></ion-icon></span>
-                            <span class="title">Log Out</span>
-                        </a>
+                        <form action="LogoutServlet" method="POST">
+                            <a href="LogoutServlet">
+                                <span class="icon"><ion-icon name="log-out"></ion-icon></span>
+                                <span class="title">Log Out</span>
+                            </a>
+                        </form>
                     </li>
                 </ul>
             </div>

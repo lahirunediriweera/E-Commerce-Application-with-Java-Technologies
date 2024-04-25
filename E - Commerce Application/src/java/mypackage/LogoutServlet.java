@@ -45,6 +45,7 @@ public class LogoutServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.removeAttribute("loguser");
             response.sendRedirect("signin.jsp");
+            out.println("<h1>"+" Have a Good Day!"+"<h1>");
             
             out.println("</body>");
             out.println("</html>");

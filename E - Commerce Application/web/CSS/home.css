@@ -1,0 +1,202 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 20, 2024, 9:53:49 PM
+    Author     : wiman
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+.container{
+    width: 100%;
+    height: 90px;
+    background:linear-gradient(to right,#004cff, #00c4fc, #00bdfa, #00b5f7,  #00adf5, #00a6f2, #009ef0, #0096ed, #008feb,  #0087e8, #0080e6, #0078e3, #0070e0, #0069de, #0061db,  #0059d9, #0052d6);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex:1;
+    align-items: center;   
+}
+nav ul li{
+    float: left;
+    text-decoration: none;
+    list-style: none;
+    padding: 20px;
+    font-size: 20px;
+    
+}
+ul li a:hover{
+    color:black;   
+    font-weight: bold;
+}
+li a{
+    color: white;
+    text-decoration: none;
+}
+li.rightcorner{
+  float: right;
+}
+.slide img{
+    width: 100%;
+    height: 620px;   
+}
+.welcome{
+    position: absolute;
+    bottom:50%;
+    top:70%;
+    left: 35px;
+}
+.welcome h1{
+    font-size: 90px;
+    color: black;
+}
+.welcome p{
+    font-size: 70px;
+    color:#14008f
+}
+.column1 {
+  float: left;
+  width: 25%;
+  padding: 10px 70px;
+  margin-right: 60px;
+}
+.column2 {
+  float: right;
+  width: 25%;
+  padding: 10px 50px;
+  margin-right: 460px;
+}
+.row {
+    margin-top:50px;
+    margin: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-top:40px;
+  margin-left: 80px;
+  margin-bottom: 40px;
+  width:420px;
+  height: 480px;
+}
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-top: 200px;
+  margin-left: 80px;
+  margin-bottom: 40px;
+  width:550px;
+  height: 710px;
+}
+
+@media screen and (max-width: 400px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+img{
+    display: inline-block;
+    width:100%;        
+}
+.card1 img{
+    display: inline-block;
+    height: 400px;    
+}
+.card2 img{
+    display:inline-block;
+    height: 630px;
+}
+.card1 a{
+    background-color: #0087e8;
+    color: white;
+    padding: 5px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.card2 a{
+    background-color: #0087e8;
+    color: white;
+    padding: 5px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.card1 a:hover{
+    background-color: black;
+}
+.card2 a:hover{
+    background-color: black;
+}
+
+.payment img{
+    width:150px;
+    height: 80px;
+    margin-right: 6px;
+    margin-left: 10px;
+}
+.payment{
+    float: right;
+}
+.footer footer{
+    text-align: center;
+    display: flex;
+    padding: 8px ;
+    height: 150px;
+    background:linear-gradient(to right,#004cff, #00c4fc, #00bdfa, #00b5f7,  #00adf5, #00a6f2, #009ef0, #0096ed, #008feb,  #0087e8, #0080e6, #0078e3, #0070e0, #0069de, #0061db,  #0059d9, #0052d6);
+}
+h4{
+    font-size: 20px;
+    margin:10px;
+}
+.contactnumber{
+    padding:35px;
+    font-size: 18px;
+    margin-left: 0;
+}
+.myemail{
+    font-size: 18px;
+    padding: 35px;
+    margin-left: 0;
+    text-decoration: none;
+    color: black;
+}
+.myemail:hover{
+    color:#2800ff;
+}
+.place{
+    font-size: 18px;
+    padding: 35px;
+    margin-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+

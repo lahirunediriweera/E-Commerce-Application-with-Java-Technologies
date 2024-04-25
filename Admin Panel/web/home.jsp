@@ -4,6 +4,10 @@
     Author     : USER
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -150,43 +154,30 @@
                             <thead>
                                 <tr>
                                     <td>Name</td>
-                                    <td>Price</td>
-                                    <td>Payment</td>
-                                    <td>Status</td>
+                                    <td>Address</td>
+                                    <td>Amount</td>
                                 </tr>
                             </thead>
                             
                             <tbody>
+                                <%
+                                    String url = "jdbc:mysql://localhost:3306/shop";
+                                    String query = "SELECT * FROM orders";
+
+                                    Class.forName("com.mysql.jdbc.Driver");
+                                    Connection con = DriverManager.getConnection(url, "root", "");
+                                    Statement st = con.createStatement();
+                                    ResultSet rs = st.executeQuery(query);
+
+                                    while(rs.next()) { %>
                                 <tr>
-                                    <td>Lahiru</td>
-                                    <td>Rs.1200</td>
-                                    <td>Paid</td>
-                                    <td><span class="status delivered">Delivered</span></td>
+                                    <td><%=rs.getString("name")%></td>
+                                    <td><%=rs.getString("address")%></td>
+                                    <td><%=rs.getString("amount")%></td>
                                 </tr>
-                                <tr>
-                                    <td>Lahiru</td>
-                                    <td>Rs.1200</td>
-                                    <td>Paid</td>
-                                    <td><span class="status delivered">Delivered</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Lahiru</td>
-                                    <td>Rs.1200</td>
-                                    <td>Paid</td>
-                                    <td><span class="status delivered">Delivered</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Lahiru</td>
-                                    <td>Rs.1200</td>
-                                    <td>Paid</td>
-                                    <td><span class="status delivered">Delivered</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Lahiru</td>
-                                    <td>Rs.1200</td>
-                                    <td>Paid</td>
-                                    <td><span class="status delivered">Delivered</span></td>
-                                </tr>
+
+                                <% } %>
+                                
                             </tbody>
                         </table>
                     </div>

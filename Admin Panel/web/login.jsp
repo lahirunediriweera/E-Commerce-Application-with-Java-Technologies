@@ -15,7 +15,7 @@
     <body>
         <div class="form-container">
         <form action="LoginServlet" method="post">
-            <h3>Login Now</h3>    
+            <h3>Admin Login</h3>    
             <label>Email</label>
             <input type="email" name="email" placeholder="Enter Your Email">
             <label>Password</label>

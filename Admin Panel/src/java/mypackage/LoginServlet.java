@@ -85,7 +85,7 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String email = request.getParameter("email");
+        /*String email = request.getParameter("email");
         String password = request.getParameter("password");
         
         System.out.println("email" + email);
@@ -100,7 +100,7 @@ public class LoginServlet extends HttpServlet {
         }
         
         
-        /*try {
+        try {
             Connection conn = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
             
             // Query to check if the user exists in the database
@@ -128,5 +128,55 @@ public class LoginServlet extends HttpServlet {
             ex.printStackTrace();
             // Handle SQL exception here
         }*/
+        
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        // Check if email and password are provided
+        if (email != null && password != null) {
+            try {
+                // Establishing database connection
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shop", "root", "");
+
+                // Query to retrieve password for the given email
+                String query = "SELECT password FROM admin WHERE email = ?";
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, email);
+                ResultSet resultSet = preparedStatement.executeQuery();
+
+                // If email is found in the database
+                if (resultSet.next()) {
+                    String dbPassword = resultSet.getString("password");
+
+                    // If the provided password matches the one in the database
+                    if (password.equals(dbPassword)) {
+                        // Authentication successful, create session and redirect to home.jsp
+                        HttpSession httpSession = request.getSession();
+                        httpSession.setAttribute("emailId", email);
+                        response.sendRedirect("home.jsp");
+                    } else {
+                        // Password does not match
+                        response.sendRedirect("login.jsp?error=password");
+                    }
+                } else {
+                    // Email not found in the database
+                    response.sendRedirect("login.jsp?error=email");
+                }
+
+                // Closing resources
+                resultSet.close();
+                preparedStatement.close();
+                connection.close();
+
+            } catch (ClassNotFoundException | SQLException ex) {
+                Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+                // Redirect to an error page or handle the error appropriately
+                response.sendRedirect("error.jsp");
+            }
+        } else {
+            // Email or password not provided
+            response.sendRedirect("login.jsp?error=empty");
+        }
     }
-}
+ }

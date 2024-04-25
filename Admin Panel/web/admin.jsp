@@ -1,6 +1,6 @@
 <%-- 
-    Document   : customer
-    Created on : Apr 19, 2024, 2:46:17 AM
+    Document   : admin
+    Created on : Apr 25, 2024, 10:47:04 AM
     Author     : USER
 --%>
 
@@ -13,30 +13,28 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Customers Info</title>
+        <title>Admin Info</title>
         <link rel="stylesheet" href="css/view.css">
     </head>
     <body>
         <div class="container"><br>
-        <h1>Customers</h1>
+        <h1>Admin Details</h1>
         <a href="home.jsp"><input type="submit" value="Back" class="sbtn"></a>
     <div class="product-display">
       <table class="product-display-table">
          <thead>
          <tr>
             <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Address</th>
-            <th>Contact Number</th>
+            <th>Name</th>
             <th>Email</th>
-            <th>Delete User</th>
+            <th>Password</th>
+            <th>Action</th>
          </tr>
          </thead>
          
          <%
                 String url = "jdbc:mysql://localhost:3306/shop";
-                String query = "SELECT * FROM customers";
+                String query = "SELECT * FROM admin";
                 
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection(url, "root", "");
@@ -47,13 +45,11 @@
                 
                 <tr>
                     <td><%=rs.getInt("id")%></td>
-                    <td><%=rs.getString("fname")%></td>
-                    <td><%=rs.getString("lname")%></td>
-                    <td><%=rs.getString("address")%></td>
-                    <td><%=rs.getString("contact")%></td>
+                    <td><%=rs.getString("name")%></td>
                     <td><%=rs.getString("email")%></td>
+                    <td><%=rs.getString("password")%></td>
                     <td>
-                        <form action="DeleteUser" method="post">
+                        <form action="DeleteAdmin" method="post">
                             <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
                             <input type="submit" class="btn" value="Delete">
                         </form>

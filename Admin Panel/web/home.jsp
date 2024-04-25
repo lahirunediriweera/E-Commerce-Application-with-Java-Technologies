@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Panel</title>
-        <link rel="stylesheet" href="css/newhome.css">
+        <link rel="stylesheet" href="css/home.css">
     </head>
     <body>
         <div class="container">
@@ -66,9 +66,9 @@
                     </li>
                     
                     <li>
-                        <a href="#">
+                        <a href="admin.jsp">
                             <span class="icon"><ion-icon name="settings"></ion-icon></span>
-                            <span class="title">Admin Setting</span>
+                            <span class="title">Admins</span>
                         </a>
                     </li>
                     
@@ -142,7 +142,7 @@
                 <div class="details">
                     <div class="recentOrders">
                         <div class="cardHeaders">
-                            <h2>Recent Orders</h2>
+                            <h2>RECENT ORDERS</h2>
                             <a href="vieworders.jsp" class="btn">View All</a>
                         </div>
                         
@@ -175,40 +175,37 @@
                                     <td>Paid</td>
                                     <td><span class="status delivered">Delivered</span></td>
                                 </tr>
+                                <tr>
+                                    <td>Lahiru</td>
+                                    <td>Rs.1200</td>
+                                    <td>Paid</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Lahiru</td>
+                                    <td>Rs.1200</td>
+                                    <td>Paid</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                     
                     <div class="recentCustomers">
                         <div class="cardHeaders">
-                            <h2>Recent Customers</h2>
+                            <h2>ADD NEW ITEMS QUICKLY</h2>
                         </div>
                         
                         <table>
                             <tr>
-                                <td width="60px">
-                                    <div class="imgBx"><img src="13245.jpg" alt=""></div>
-                                </td>
-                                <td>
-                                    <h4>David <br> <span>Italy</span></h4>
-                                </td>
+                                <input type="button" value="Add New Gents Item">
                             </tr>
                             <tr>
-                                <td width="60px">
-                                    <div class="imgBx"><img src="13245.jpg" alt=""></div>
-                                </td>
-                                <td>
-                                    <h4>David <br> <span>Italy</span></h4>
-                                </td>
+                                <input type="button" value="Add New Ladies Item">
                             </tr>
                             <tr>
-                                <td width="60px">
-                                    <div class="imgBx"><img src="13245.jpg" alt=""></div>
-                                </td>
-                                <td>
-                                    <h4>David <br> <span>Italy</span></h4>
-                                </td>
-                            </tr>
+                                <input type="button" value="Add New Kids Item">
+                            </tr>    
                         </table>
                     </div>
                 </div>

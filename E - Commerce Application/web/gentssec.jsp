@@ -11,10 +11,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Mens Section</title>
         <!--custom CSS-->
-        <link href="gentssec.css" rel="stylesheet">
+        <link href="CSS/gentssec.css" rel="stylesheet">
     </head>
-    <body class="body-fixed">
-        <div class="men">
+    <body>
+        <div class="container">
             
         <!--Nav Bar-->
             <div class="navbar">
@@ -36,11 +36,13 @@
             </div>
             
         <!--poster-->
+        <div class="men">
         <div class="poster">
             <h1>Mens<span>Fashion</span></h1>
         </div>
             
             
+        </div>
         </div>
     </body>
 </html>

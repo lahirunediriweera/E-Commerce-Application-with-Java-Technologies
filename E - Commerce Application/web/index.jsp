@@ -20,10 +20,10 @@ and open the template in the editor.
                 </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Ladies Section</a></li>
-                    <li><a href="#">Gents Section</a></li>
-                    <li><a href="#">Kids Section</a></li> 
+                    <li><a href="home.jsp">Home</a></li>
+                    <li><a href="ladiessec">Ladies Section</a></li>
+                    <li><a href="gentssec">Gents Section</a></li>
+                    <li><a href="kidssec">Kids Section</a></li> 
                     <li class="rightcorner"><a href="signup.jsp">Register</a></li>
                     <li class="rightcorner"><a href="login.jsp">Login</a></li>
                     <li class="rightcorner"><a href="#">Search</a></li>

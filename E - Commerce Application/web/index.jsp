@@ -1,16 +1,15 @@
-<%-- 
-    Document   : home
-    Created on : Apr 20, 2024, 7:18:00 PM
-    Author     : wiman
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>HomePage</title>
-        <link rel="stylesheet" href="home.css">
+        <title>MainPage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/home.css">
     </head>
     <body>
         <div class="container">
@@ -21,14 +20,13 @@
                 </div>
             <nav>
                 <ul>
-                    <li><a href="home.jsp">Home</a></li>
-                    <li><a href="ladiessec.jsp">Ladies Section</a></li>
-                    <li><a href="gentssec.jsp">Gents Section</a></li>
-                    <li><a href="kidssec.jsp">Kids Section</a></li>
-                    <li class="rightcorner"><a href="profile.jsp">Profile</a></li>
-                    <li class="rightcorner"><a href="index.jsp.html">Logout</a></li>
-                    <li class="rightcorner"><a href="cart.jsp">Cart</a></li>
-                    <li class="rightcorner"><a href="search.jsp">Search</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ladies Section</a></li>
+                    <li><a href="#">Gents Section</a></li>
+                    <li><a href="#">Kids Section</a></li> 
+                    <li class="rightcorner"><a href="signup.jsp">Register</a></li>
+                    <li class="rightcorner"><a href="login.jsp">Login</a></li>
+                    <li class="rightcorner"><a href="#">Search</a></li>
                 </ul>
             </nav> 
             </div>
@@ -87,7 +85,9 @@
                     </div>
                 </footer>   
            </div>
-                       
+            
+            
+            
         </div>
     </body>
 </html>

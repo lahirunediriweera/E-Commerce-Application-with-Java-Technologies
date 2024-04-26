@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>HomePage</title>
-        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="CSS/home.css">
     </head>
     <body>
         <div class="container">
@@ -26,7 +26,7 @@
                     <li><a href="gentssec.jsp">Gents Section</a></li>
                     <li><a href="kidssec.jsp">Kids Section</a></li>
                     <li class="rightcorner"><a href="profile.jsp">Profile</a></li>
-                    <li class="rightcorner"><a href="index.jsp.html">Logout</a></li>
+                    <li class="rightcorner"><a href="index.jsp">Logout</a></li>
                     <li class="rightcorner"><a href="cart.jsp">Cart</a></li>
                     <li class="rightcorner"><a href="search.jsp">Search</a></li>
                 </ul>

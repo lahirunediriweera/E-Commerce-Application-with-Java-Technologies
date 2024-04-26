@@ -12,6 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>checkout page</h1>
+        <p>welcome to my checkout page..</p>
     </body>
 </html>

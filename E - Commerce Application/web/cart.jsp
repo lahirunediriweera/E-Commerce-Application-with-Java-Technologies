@@ -124,9 +124,7 @@
                     <div class="summary">
 			 <h3>Summary</h3>
                             <div class="summary-item"><span class="text">Subtotal</span><span class="price">Rs360</span></div>
-                            <div class="summary-item"><span class="text">Discount</span><span class="price">Rs0</span></div>
-                            <div class="summary-item"><span class="text">Shipping</span><span class="price">Rs0</span></div>
-                            <div class="summary-item"><span class="text">Total</span><span class="price">Rs360</span></div>
+                            
                             <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
                     </div>
 		</div>

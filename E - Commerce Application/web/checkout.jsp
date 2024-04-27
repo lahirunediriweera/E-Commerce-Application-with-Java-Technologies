@@ -79,7 +79,7 @@
                     <!--REVIEW ORDER SUMMERY-->
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            Review Order Summery <div class="pull-right"><small><a class="afix-1" href="#">Edit Cart</a></small></div>
+                            <h3>Review Order Summery</h3> <div class="pull-right"><small><a class="afix-1" href="#">Edit Cart</a></small></div>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">

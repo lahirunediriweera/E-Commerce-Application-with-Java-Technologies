@@ -25,7 +25,7 @@
 		          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
 		        </div>
 		        <div class="content">
-	 				<div class="row">
+                            <div class="row">
 	 					<div class="col-md-12 col-lg-8">
 	 						<div class="items">
 				 				<div class="product">

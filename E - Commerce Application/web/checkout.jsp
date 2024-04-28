@@ -252,9 +252,7 @@
                 
                 </form>
             </div>
-            <div class="row cart-footer">
-        
-            </div>
+            
     </div>
     </body>
 </html>

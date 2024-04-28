@@ -33,7 +33,7 @@
          </thead>
          
          <%
-                String url = "jdbc:mysql://localhost:3306/shop";
+                String url = "jdbc:mysql://localhost:3306/bloomshop";
                 String query = "SELECT * FROM admin";
                 
                 Class.forName("com.mysql.jdbc.Driver");
@@ -44,13 +44,13 @@
                 while(rs.next()) { %>
                 
                 <tr>
-                    <td><%=rs.getInt("id")%></td>
+                    <td><%=rs.getInt("admin-id")%></td>
                     <td><%=rs.getString("name")%></td>
                     <td><%=rs.getString("email")%></td>
                     <td><%=rs.getString("password")%></td>
                     <td>
                         <form action="DeleteAdmin" method="post">
-                            <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
+                            <input type="hidden" name="id" value="<%=rs.getInt("admin-id")%>">
                             <input type="submit" class="btn" value="Delete">
                         </form>
                     </td>

@@ -16,10 +16,10 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Methma
+ * @author wiman
  */
-@WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "LogoutServlet", urlPatterns = {"/LogoutServlet"})
+public class LogoutServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +38,14 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet LogoutServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
+            
+            HttpSession session = request.getSession();
+            session.removeAttribute("Login");
+            response.sendRedirect("index.html");
+            
             out.println("</body>");
             out.println("</html>");
         }
@@ -73,21 +77,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String email = request.getParameter("email");
-        String pwd = request.getParameter("password");
-        
-        if (email != null && email.equalsIgnoreCase("admin@gmail.com") && pwd != null && pwd.equalsIgnoreCase("admin")) {
-            
-            HttpSession httpSession = request.getSession();
-            
-            httpSession.setAttribute("email", email);
-            request.getRequestDispatcher("welcome.jsp").forward(request, response);
-        }
-        
-        Login lg=new Login();
-        
-        //processRequest(request, response);
+        processRequest(request, response);
     }
 
     /**

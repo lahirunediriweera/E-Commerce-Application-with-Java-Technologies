@@ -25,18 +25,18 @@ public class DeleteUser extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        int id = Integer.parseInt(request.getParameter("id"));
+        int customerId = Integer.parseInt(request.getParameter("customerId"));
         
         try {
-            String url = "jdbc:mysql://localhost:3306/shop";
+            String url = "jdbc:mysql://localhost:3306/bloomshop";
             String username = "root";
             String password = "";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, username, password);
             
-            String query = "DELETE FROM customers WHERE id=?";
+            String query = "DELETE FROM customer WHERE customerId=?";
             PreparedStatement st = con.prepareStatement(query);
-            st.setInt(1, id);
+            st.setInt(1, customerId);
             
             int rowsAffected = st.executeUpdate();
             
@@ -44,9 +44,9 @@ public class DeleteUser extends HttpServlet {
             con.close();
             
             if (rowsAffected > 0) {
-                out.println("<h3>Customer with ID " + id + " deleted successfully!</h3>");
+                out.println("<h3>Customer with ID " + customerId + " deleted successfully!</h3>");
             } else {
-                out.println("<h3>Failed to delete Customer with ID " + id + "!</h3>");
+                out.println("<h3>Failed to delete Customer with ID " + customerId + "!</h3>");
             }
         } catch (Exception e) {
             out.println("<h3>Error: " + e.getMessage() + "</h3>");

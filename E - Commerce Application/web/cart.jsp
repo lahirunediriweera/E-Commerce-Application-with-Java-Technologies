@@ -31,7 +31,7 @@
 			<div class="product">
                             <div class="row">
 				<div class="col-md-3">
-                                    <img class="img-fluid mx-auto d-block image" src="assets/img/image.jpg">
+                                    <img class="img-fluid mx-auto d-block image" src="Image/ladiesmain.jpg">
 				</div>
 				<div class="col-md-8">
                                     <div class="info">
@@ -41,7 +41,6 @@
                                                     <a href="#">Lorem Ipsum dolor</a>
                                                     <div class="product-info">
                                                     <div>Price: <span class="value">#</span></div>
-                                                    <div>Color: <span class="value">#</span></div>
                                                     <div>Size: <span class="value">#</span></div>
                                                     </div>
 						</div>
@@ -61,7 +60,7 @@
 			<div class="product">
                             <div class="row">
 				<div class="col-md-3">
-                                    <img class="img-fluid mx-auto d-block image" src="assets/img/image.jpg">
+                                    <img class="img-fluid mx-auto d-block image" src="Image/gentsmain.jpg">
 				</div>
 				<div class="col-md-8">
                                     <div class="info">
@@ -71,7 +70,6 @@
                                                     <a href="#">Lorem Ipsum dolor</a>
 							<div class="product-info">
                                                             <div>Price: <span class="value">#</span></div>
-                                                            <div>Color: <span class="value">#</span></div>
                                                             <div>Size: <span class="value">#</span></div>
 							</div>
 						</div>
@@ -91,7 +89,7 @@
 			<div class="product">
                            <div class="row">
 				<div class="col-md-3">
-                                    <img class="img-fluid mx-auto d-block image" src="assets/img/image.jpg">
+                                    <img class="img-fluid mx-auto d-block image" src="Image/13245.jpg">
 				</div>
                             <div class="col-md-8">
 				<div class="info">
@@ -101,7 +99,6 @@
 						<a href="#">Lorem Ipsum dolor</a>
 						<div class="product-info">
                                                     <div>Price: <span class="value">#</span></div>
-                                                    <div>Color: <span class="value">#</span></div>
                                                     <div>Size: <span class="value">#</span></div>
 						</div>
                                             </div>
@@ -126,6 +123,7 @@
                             <div class="summary-item"><span class="text">Subtotal</span><span class="price">Rs360</span></div>
                             
                             <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+                            
                     </div>
 		</div>
             </div> 

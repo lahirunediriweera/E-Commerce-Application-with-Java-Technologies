@@ -108,6 +108,7 @@
 
 .shopping-cart .summary button{
 	margin-top: 20px;
+        margin-left: 20px;
 }
 
 @media (min-width: 768px) {
@@ -129,3 +130,7 @@
 		padding: 4px 10px;
 		text-align: center; 
 	}
+        .btn btn-primary btn-lg btn-block {
+            margin-left: 50px;
+            padding-left: 50px;
+        }

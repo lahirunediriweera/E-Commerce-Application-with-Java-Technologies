@@ -37,7 +37,7 @@
          </thead>
          
          <%
-                String url = "jdbc:mysql://localhost:3306/shop";
+                String url = "jdbc:mysql://localhost:3306/bloomshop";
                 String query = "SELECT * FROM kids";
                 
                 Class.forName("com.mysql.jdbc.Driver");

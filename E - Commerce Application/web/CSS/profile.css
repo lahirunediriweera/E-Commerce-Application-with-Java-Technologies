@@ -1,3 +1,4 @@
+
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -45,108 +46,28 @@ li a{
 li.rightcorner{
   float: right;
 }
-.slide img{
-    width: 100%;
-    height: 620px;   
-}
-.welcome{
-    position: absolute;
-    bottom:50%;
-    top:70%;
-    left: 35px;
-}
-.welcome h1{
-    font-size: 90px;
-    color: black;
-}
-.welcome p{
-    font-size: 70px;
-    color:#14008f
-}
-.column1 {
-  float: left;
-  width: 25%;
-  padding: 10px 70px;
-  margin-right: 60px;
-}
-.column2 {
-  float: right;
-  width: 25%;
-  padding: 10px 50px;
-  margin-right: 460px;
-}
-.row {
-    margin-top:50px;
-    margin: 10px;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.card1 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
-  padding: 20px;
-  text-align: center;
-  background-color: #f1f1f1;
-  margin-top:40px;
-  margin-left: 80px;
-  margin-bottom: 40px;
-  width:420px;
-  height: 480px;
-}
-.card2 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
-  padding: 20px;
-  text-align: center;
-  background-color: #f1f1f1;
-  margin-top: 200px;
-  margin-left: 80px;
-  margin-bottom: 40px;
-  width:550px;
-  height: 710px;
+h1{
+    margin-top: 0;
+    font-size: 75px;
+    text-align: center;
 }
 
-@media screen and (max-width: 400px) {
-  .column {
+tr{
+    column-width: 70px;
+    font-size: 120%;
+}
+th{
+    padding-left: 260px;
+    font-size: 25px;
+    text-align: left;
+    font-weight: bold;
+}
+table{   
     width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+    display: block
 }
-img{
-    display: inline-block;
-    width:100%;        
-}
-.card1 img{
-    display: inline-block;
-    height: 400px;    
-}
-.card2 img{
-    display:inline-block;
-    height: 630px;
-}
-.card1 a{
-    background-color: #0087e8;
-    color: white;
-    padding: 5px 35px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-.card2 a{
-    background-color: #0087e8;
-    color: white;
-    padding: 5px 35px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-.card1 a:hover{
-    background-color: black;
-}
-.card2 a:hover{
-    background-color: black;
+th,td{  
+    height:60px;
 }
 
 .payment img{
@@ -196,11 +117,6 @@ h4{
     padding: 35px;
     margin-left: 0;
 }
-
-
-
-
-
 
 
 

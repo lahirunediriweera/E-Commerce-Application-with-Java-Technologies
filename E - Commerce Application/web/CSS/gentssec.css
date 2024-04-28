@@ -43,7 +43,7 @@ li.rightcorner{
 /*Poster*/
 
 .poster{
-    background-image:url(../Image/gentsmain.jpg);
+    background-image:url(../Image/gentssection.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,4 +51,12 @@ li.rightcorner{
     padding: 280px 150px 200px;
     width: 100%;
     height: 90%;
+}
+
+.poster h1{
+    font-size: 100px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-family: geogia,serif;
 }

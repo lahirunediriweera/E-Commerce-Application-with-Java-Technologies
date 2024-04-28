@@ -44,13 +44,13 @@
                 while(rs.next()) { %>
                 
                 <tr>
-                    <td><%=rs.getInt("admin-id")%></td>
+                    <td><%=rs.getInt("adminId")%></td>
                     <td><%=rs.getString("name")%></td>
                     <td><%=rs.getString("email")%></td>
                     <td><%=rs.getString("password")%></td>
                     <td>
                         <form action="DeleteAdmin" method="post">
-                            <input type="hidden" name="id" value="<%=rs.getInt("admin-id")%>">
+                            <input type="hidden" name="adminId" value="<%=rs.getInt("adminId")%>">
                             <input type="submit" class="btn" value="Delete">
                         </form>
                     </td>

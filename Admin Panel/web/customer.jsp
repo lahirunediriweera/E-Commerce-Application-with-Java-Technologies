@@ -35,8 +35,8 @@
          </thead>
          
          <%
-                String url = "jdbc:mysql://localhost:3306/shop";
-                String query = "SELECT * FROM customers";
+                String url = "jdbc:mysql://localhost:3306/bloomshop";
+                String query = "SELECT * FROM customer";
                 
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection(url, "root", "");
@@ -46,7 +46,7 @@
                 while(rs.next()) { %>
                 
                 <tr>
-                    <td><%=rs.getInt("id")%></td>
+                    <td><%=rs.getInt("customerId")%></td>
                     <td><%=rs.getString("fname")%></td>
                     <td><%=rs.getString("lname")%></td>
                     <td><%=rs.getString("address")%></td>
@@ -54,7 +54,7 @@
                     <td><%=rs.getString("email")%></td>
                     <td>
                         <form action="DeleteUser" method="post">
-                            <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
+                            <input type="hidden" name="customerId" value="<%=rs.getInt("customerId")%>">
                             <input type="submit" class="btn" value="Delete">
                         </form>
                     </td>

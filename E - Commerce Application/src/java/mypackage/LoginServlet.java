@@ -82,7 +82,9 @@ public class LoginServlet extends HttpServlet {
             HttpSession httpSession = request.getSession();
             
             httpSession.setAttribute("email", email);
-            request.getRequestDispatcher("welcome.jsp").forward(request, response);
+            //request.getRequestDispatcher("home.jsp").forward(request, response);
+            
+            response.sendRedirect("home.jsp");
         }
         
         Login lg=new Login();

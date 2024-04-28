@@ -29,18 +29,18 @@ public class DeleteAdmin extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        int id = Integer.parseInt(request.getParameter("id"));
+        int adminId = Integer.parseInt(request.getParameter("adminId"));
         
         try {
-            String url = "jdbc:mysql://localhost:3306/shop";
+            String url = "jdbc:mysql://localhost:3306/bloomshop";
             String username = "root";
             String password = "";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, username, password);
             
-            String query = "DELETE FROM admin WHERE id=?";
+            String query = "DELETE FROM admin WHERE adminId=?";
             PreparedStatement st = con.prepareStatement(query);
-            st.setInt(1, id);
+            st.setInt(1, adminId);
             
             int rowsAffected = st.executeUpdate();
             
@@ -48,9 +48,9 @@ public class DeleteAdmin extends HttpServlet {
             con.close();
             
             if (rowsAffected > 0) {
-                out.println("<h3>Admin with ID " + id + " deleted successfully!</h3>");
+                out.println("<h3>Admin with ID " + adminId + " deleted successfully!</h3>");
             } else {
-                out.println("<h3>Failed to delete Admin with ID " + id + "!</h3>");
+                out.println("<h3>Failed to delete Admin with ID " + adminId + "!</h3>");
             }
         } catch (Exception e) {
             out.println("<h3>Error: " + e.getMessage() + "</h3>");

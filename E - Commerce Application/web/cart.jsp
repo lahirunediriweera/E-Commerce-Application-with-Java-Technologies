@@ -96,7 +96,7 @@
                                     <div class="row">
 					<div class="col-md-5 product-name">
                                             <div class="product-name">
-						<a href="#">Lorem Ipsum dolor</a>
+						<a href="#">shirt</a>
 						<div class="product-info">
                                                     <div>Price: <span class="value">#</span></div>
                                                     <div>Size: <span class="value">#</span></div>

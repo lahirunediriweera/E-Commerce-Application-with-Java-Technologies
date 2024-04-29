@@ -18,10 +18,7 @@
         <p></p>
         <form action="GentServlet" method="POST">
             <div class="row">
-                <div class="column">
-                    <label for="name">Item ID</label>
-                    <input type="text" id="id" name="id" placeholder="ID here">
-                </div>
+                
                 <div class="column">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Name here">
@@ -37,8 +34,8 @@
             </div>
             <div class="row">
                 <div class="column">
-                    <label for="amount">Amount</label>
-                    <input type="number" id="amount" name="amount" placeholder="Amount here">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" placeholder="Amount here">
                 </div>
                 <div class="column">
                     <label for="itempic">Item Image</label>

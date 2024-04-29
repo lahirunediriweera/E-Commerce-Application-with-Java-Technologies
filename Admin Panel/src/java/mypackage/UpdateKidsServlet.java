@@ -76,32 +76,32 @@ public class UpdateKidsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+        PrintWriter out = response.getWriter(); 
         
         // Retrieve parameters from the request
-        int id = Integer.parseInt(request.getParameter("id"));
-        String picture = request.getParameter("picture");
+        int kidsId = Integer.parseInt(request.getParameter("kidsId"));
+        String image = request.getParameter("image");
         String name = request.getParameter("name");
         String description = request.getParameter("description");
-        String price = request.getParameter("price");
-        int amount = Integer.parseInt(request.getParameter("amount"));
+        int price = Integer.parseInt(request.getParameter("price"));
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
         
         try {
-            String url = "jdbc:mysql://localhost:3306/shop";
+            String url = "jdbc:mysql://localhost:3306/bloomshop";
             String username = "root";
             String password = "";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, username, password);
             
-            String query = "UPDATE kids SET picture=?, name=?, description=?, price=?, amount=?  WHERE id=?";
+            String query = "UPDATE kids SET image=?, name=?, description=?, price=?, quantity=?  WHERE kidsId=?";
             PreparedStatement st = con.prepareStatement(query);
             
-            st.setString(1, picture);
+            st.setString(1, image);
             st.setString(2, name);
             st.setString(3, description);
-            st.setString(4, price);
-            st.setInt(5, amount);
-            st.setInt(6, id);
+            st.setInt(4, price);
+            st.setInt(5, quantity);
+            st.setInt(6, kidsId);
            
             int rowsAffected = st.executeUpdate();
             
@@ -109,9 +109,9 @@ public class UpdateKidsServlet extends HttpServlet {
             con.close();
            
             if (rowsAffected > 0) {
-                out.println("<h3>Book with ID " + id + " updated successfully!</h3>");
+                out.println("<h3>Book with ID updated successfully!</h3>");
             } else {
-                out.println("<h3>Failed to update book with ID " + id + "!</h3>");
+                out.println("<h3>Failed to update book with ID !</h3>");
             }
         } catch (Exception e) {
             out.println("<h3>Error: " + e.getMessage() + "</h3>");

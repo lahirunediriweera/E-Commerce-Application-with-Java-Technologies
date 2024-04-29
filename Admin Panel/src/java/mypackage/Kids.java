@@ -23,9 +23,9 @@ class Kids {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     Statement st;
-    void insertKids(int id, String name, String description, String price, String amount, String picture) {
+    void insertKids(String name, String description, int price, int quantity, String image) {
             connectToDB();
-            String query ="INSERT INTO kids VALUES("+id+",'"+name+"','"+description+"','"+price+"','"+amount+"','"+picture+"')";    
+            String query ="INSERT INTO kids (name,description,price,quantity,image) VALUES ('"+name+"','"+description+"','"+price+"','"+quantity+"','"+image+"')";    
             try {
                 st.executeUpdate(query);
                 System.out.println("Record inserted");
@@ -37,7 +37,7 @@ class Kids {
     
     private void connectToDB() {
         String driver= "com.mysql.jdbc.Driver";
-        String url="jdbc:mysql://localhost:3306/shop";
+        String url="jdbc:mysql://localhost:3306/bloomshop";
         try {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, "root", "");

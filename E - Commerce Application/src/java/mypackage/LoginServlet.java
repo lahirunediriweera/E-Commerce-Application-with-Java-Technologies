@@ -7,12 +7,21 @@ package mypackage;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 
 /**
  *
@@ -74,21 +83,53 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+       PrintWriter out = response.getWriter();
+        
         String email = request.getParameter("email");
         String pwd = request.getParameter("password");
         
-        if (email != null && email.equalsIgnoreCase("admin@gmail.com") && pwd != null && pwd.equalsIgnoreCase("admin")) {
-            
-            HttpSession httpSession = request.getSession();
-            
-            httpSession.setAttribute("email", email);
-            //request.getRequestDispatcher("home.jsp").forward(request, response);
-            
-            response.sendRedirect("home.jsp");
+         try{
+        if (email != null && pwd != null) {
+            String driver= "com.mysql.jdbc.Driver";
+            String url="jdbc:mysql://localhost:3306/userdb";
+            try {
+                Class.forName(driver);
+                Connection con = DriverManager.getConnection(url, "root", "");
+                String query = "SELECT pwd FROM user WHERE email = ?";
+                PreparedStatement ps = con.prepareStatement(query);
+                ps.setString(1, email);
+                ResultSet rs = ps.executeQuery();
+                
+                 if (rs.next()) {
+                    String dbpwd = rs.getString("pwd");
+                    if (pwd.equals(dbpwd)) {
+                        HttpSession httpSession = request.getSession();
+                        httpSession.setAttribute("emailId", email);
+                        response.sendRedirect("home.jsp");
+                    } 
+                    else {
+                        response.sendRedirect("signin.jsp?error=email");
+                    }
+                    rs.close();
+                    ps.close();
+                    con.close();
+                }
+
+            } 
+            catch (ClassNotFoundException | SQLException ex) {
+                Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+
+            } 
         }
         
-        Login lg=new Login();
+        }
+        catch(Exception ex){
+            out.println("Error");
+        }
         
+        Cookie coo = new Cookie("Email" , email);
+        response.addCookie(coo);
+  
         //processRequest(request, response);
     }
 

@@ -19,10 +19,6 @@
         <form action="LadyServlet" method="POST">
             <div class="row">
                 <div class="column">
-                    <label for="id">Item ID</label>
-                    <input type="text" id="id" name="id" placeholder="ID here">
-                </div>
-                <div class="column">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Name here">
                 </div>

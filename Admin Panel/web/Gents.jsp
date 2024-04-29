@@ -52,12 +52,12 @@
                     <td><%=rs.getString("image")%></td>
                     <td><%=rs.getString("name")%></td>
                     <td><%=rs.getString("description")%></td>
-                    <td><%=rs.getString("price")%></td>
+                    <td><%=rs.getInt("price")%></td>
                     <td><%=rs.getInt("quantity")%></td>
                     <td>
                         <%--<button class="btn" onclick="openEditPopup('<%=rs.getInt("id")%>', '<%=rs.getString("name")%>', '<%=rs.getString("description")%>', '<%=rs.getString("price")%>')">Update</button>--%>
                         <form action="DeleteGent" method="post">
-                            <input type="hidden" name="gentsid" value="<%=rs.getInt("gentsid")%>">
+                            <input type="hidden" name="gentsId" value="<%=rs.getInt("gentsId")%>">
                             <input type="submit" class="btn" value="Delete">
                         </form>
                     </td>

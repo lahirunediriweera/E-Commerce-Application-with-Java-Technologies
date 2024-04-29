@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add Items Ladies Section</title>
-        <link rel="stylesheet" href="css/settings.css">
+        <link rel="stylesheet" href="css/setting.css">
     </head>
     <body>
         <div class="container">
@@ -28,7 +28,7 @@
                 </div>
                 <div class="column">
                     <label for="price">Price</label>
-                    <input type="text" id="price" name="price" placeholder="Price here">
+                    <input type="number" id="price" name="price" placeholder="Price here">
                 </div>
             </div>
             <div class="row">

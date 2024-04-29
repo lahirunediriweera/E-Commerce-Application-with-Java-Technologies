@@ -14,7 +14,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Panel</title>
-        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/homen.css">
     </head>
     <body>
         <div class="container">
@@ -102,7 +102,7 @@
                 <div class="cardBox">
                     <div class="card">
                         <div>
-                            <div class="numbers">1,504</div>
+                            <div class="numbers">15</div>
                             <div class="cardName">Total Orders</div>
                         </div>
                         
@@ -113,8 +113,8 @@
                     
                     <div class="card">
                         <div>
-                            <div class="numbers">1,504</div>
-                            <div class="cardName">Total Customers</div>
+                            <div class="numbers">20</div>
+                            <div class="cardName">Total Users</div>
                         </div>
                         
                         <div class="iconBx">
@@ -124,7 +124,7 @@
                     
                     <div class="card">
                         <div>
-                            <div class="numbers">1,504</div>
+                            <div class="numbers">30</div>
                             <div class="cardName">Total Items</div>
                         </div>
                         
@@ -135,7 +135,7 @@
                     
                     <div class="card">
                         <div>
-                            <div class="numbers">1,504</div>
+                            <div class="numbers">45</div>
                             <div class="cardName">Total Visits</div>
                         </div>
                         
@@ -163,7 +163,7 @@
                             
                             <tbody>
                                 <%
-                                    String url = "jdbc:mysql://localhost:3306/shop";
+                                    String url = "jdbc:mysql://localhost:3306/bloomshop";
                                     String query = "SELECT * FROM orders";
 
                                     Class.forName("com.mysql.jdbc.Driver");
@@ -175,7 +175,7 @@
                                 <tr>
                                     <td><%=rs.getString("name")%></td>
                                     <td><%=rs.getString("address")%></td>
-                                    <td><%=rs.getString("amount")%></td>
+                                    <td><%=rs.getInt("amount")%></td>
                                 </tr>
 
                                 <% } %>
@@ -191,13 +191,13 @@
                         
                         <table>
                             <tr>
-                                <input type="button" value="Add New Gents Item">
+                            <a href="addgentsitem.jsp"><input type="button" value=" Add New Gents Item"></a>
                             </tr>
                             <tr>
-                                <input type="button" value="Add New Ladies Item">
+                            <a href="addladiesitem.jsp"><input type="button" value="Add New Ladies Item"></a>
                             </tr>
                             <tr>
-                                <input type="button" value="Add New Kids Item">
+                            <a href="addkidsitem.jsp"><input type="button" value="  Add New Kids Item  "></a>
                             </tr>    
                         </table>
                     </div>

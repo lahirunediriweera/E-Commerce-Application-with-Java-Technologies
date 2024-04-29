@@ -33,7 +33,7 @@
          </thead>
          
          <%
-                String url = "jdbc:mysql://localhost:3306/shop";
+                String url = "jdbc:mysql://localhost:3306/bloomshop";
                 String query = "SELECT * FROM orders";
                 
                 Class.forName("com.mysql.jdbc.Driver");
@@ -44,11 +44,11 @@
                 while(rs.next()) { %>
                 
                 <tr>
-                    <td><%=rs.getInt("id")%></td>
+                    <td><%=rs.getInt("orderId")%></td>
                     <td><%=rs.getString("name")%></td>
                     <td><%=rs.getString("address")%></td>
                     <td><%=rs.getString("items")%></td>
-                    <td><%=rs.getString("amount")%></td>
+                    <td><%=rs.getInt("amount")%></td>
                 </tr>
                 
                 <% } %>

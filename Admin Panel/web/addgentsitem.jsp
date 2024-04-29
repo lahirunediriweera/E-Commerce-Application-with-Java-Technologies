@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add Items Gents Section</title>
-        <link rel="stylesheet" href="css/settings.css">
+        <link rel="stylesheet" href="css/setting.css">
     </head>
     <body>
         <div class="container">
@@ -18,7 +18,6 @@
         <p></p>
         <form action="GentServlet" method="POST">
             <div class="row">
-                
                 <div class="column">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Name here">

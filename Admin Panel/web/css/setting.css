@@ -78,9 +78,9 @@ button{
 }
 .btn{
     display: inline-flexbox;
-    background-color: #16a085;
+    background-color: #2a2185;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     width: 80px;
 }

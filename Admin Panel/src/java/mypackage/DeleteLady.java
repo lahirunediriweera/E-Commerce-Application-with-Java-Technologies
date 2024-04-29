@@ -28,13 +28,13 @@ public class DeleteLady extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         
         try {
-            String url = "jdbc:mysql://localhost:3306/shop";
+            String url = "jdbc:mysql://localhost:3306/bloomshop";
             String username = "root";
             String password = "";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, username, password);
             
-            String query = "DELETE FROM ladies WHERE id=?";
+            String query = "DELETE FROM ladies WHERE ladiesId=?";
             PreparedStatement st = con.prepareStatement(query);
             st.setInt(1, id);
             

@@ -43,7 +43,7 @@ class Kids {
             Connection con = DriverManager.getConnection(url, "root", "");
             st = con.createStatement();
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(Gents.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Kids.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

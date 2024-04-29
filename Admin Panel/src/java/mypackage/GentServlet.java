@@ -73,18 +73,17 @@ public class GentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String description = request.getParameter("description");
-        String price = request.getParameter("price");
-        String amount = request.getParameter("amount");
-        String picture = request.getParameter("itempic");
+        int price = Integer.parseInt(request.getParameter("price"));
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
+        String image = request.getParameter("itempic");
         
         PrintWriter out = response.getWriter();
         out.println("This Item Added Gents Section Successfully....");
         
         Gents b = new Gents();
-        b.insertGents(id,name,description,price,amount,picture);
+        b.insertGents(name,description,price,quantity,image);
         
         //processRequest(request, response);
     }

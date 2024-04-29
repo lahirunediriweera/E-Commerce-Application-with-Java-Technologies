@@ -27,17 +27,17 @@
          <thead>
          <tr>
             <th>ID</th>
-            <th>image</th>
-            <th>name</th>
-            <th>description</th>
-            <th>price</th>
-            <th>amount</th>
-            <th>action</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Action</th>
          </tr>
          </thead>
          
          <%
-                String url = "jdbc:mysql://localhost:3306/shop";
+                String url = "jdbc:mysql://localhost:3306/bloomshop";
                 String query = "SELECT * FROM gents";
                 
                 Class.forName("com.mysql.jdbc.Driver");
@@ -48,16 +48,16 @@
                 while(rs.next()) { %>
                 
                 <tr>
-                    <td><%=rs.getInt("id")%></td>
-                    <td><%=rs.getString("picture")%></td>
+                    <td><%=rs.getInt("gentsid")%></td>
+                    <td><%=rs.getString("image")%></td>
                     <td><%=rs.getString("name")%></td>
                     <td><%=rs.getString("description")%></td>
                     <td><%=rs.getString("price")%></td>
-                    <td><%=rs.getInt("amount")%></td>
+                    <td><%=rs.getInt("quantity")%></td>
                     <td>
                         <%--<button class="btn" onclick="openEditPopup('<%=rs.getInt("id")%>', '<%=rs.getString("name")%>', '<%=rs.getString("description")%>', '<%=rs.getString("price")%>')">Update</button>--%>
                         <form action="DeleteGent" method="post">
-                            <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
+                            <input type="hidden" name="gentsid" value="<%=rs.getInt("gentsid")%>">
                             <input type="submit" class="btn" value="Delete">
                         </form>
                     </td>

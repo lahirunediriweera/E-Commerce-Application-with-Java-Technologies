@@ -96,7 +96,7 @@
                                     <div class="row">
 					<div class="col-md-5 product-name">
                                             <div class="product-name">
-						<a href="#">Lorem Ipsum dolor</a>
+						<a href="#">shirt</a>
 						<div class="product-info">
                                                     <div>Price: <span class="value">#</span></div>
                                                     <div>Size: <span class="value">#</span></div>
@@ -122,8 +122,7 @@
 			 <h3>Summary</h3>
                             <div class="summary-item"><span class="text">Subtotal</span><span class="price">Rs360</span></div>
                             
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
-                            
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button> 
                     </div>
 		</div>
             </div> 

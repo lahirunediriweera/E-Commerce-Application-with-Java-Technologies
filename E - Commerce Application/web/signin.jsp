@@ -9,10 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" href="logincss.css">
+        <title>Login</title>
     </head>
     <body>
-        <div><center>
+        <div class="background">
+        <div class="logincontainer"><center>
         <h1>Login</h1>
         <form action="LoginServlet" method="POST">
             <table border="0">
@@ -31,16 +33,16 @@
                         
                     </tr> <br>
                     <tr>
-                        <td><input type="submit" value="Submit" /></td>
-                        <td><input type="reset" value="Cancel" /></td>
+                        <td><input type="submit" value="Submit" id="submit" /></td>
+                        <td><input type="reset" value="Cancel" id="reset" /></td>
                     </tr>
                 </tbody>
             </table>
             
         </form>
-        <h4><a href=""> Create a new account | <a href=""> Sign-Up </a></h4>
+        <h4><a href="signup.jsp"> Create a new account | <a href="signup.jsp"> Sign-Up </a></h4>
         
             </center></div>
+        </div>
     </body>
 </html>
-

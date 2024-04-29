@@ -4,6 +4,12 @@
     box-sizing: border-box;    
 }
 
+.container{
+    width: 100%;
+    height: 90px;
+    background:linear-gradient(to right,#004cff, #00c4fc, #00bdfa, #00b5f7,  #00adf5, #00a6f2, #009ef0, #0096ed, #008feb,  #0087e8, #0080e6, #0078e3, #0070e0, #0069de, #0061db,  #0059d9, #0052d6);
+}
+
 /*NavBar*/
 
 .navbar{
@@ -37,7 +43,7 @@ li.rightcorner{
 /*Poster*/
 
 .poster{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(Image/gentssection.jpg);
+    background-image:url(../Image/gentssection.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,4 +51,12 @@ li.rightcorner{
     padding: 280px 150px 200px;
     width: 100%;
     height: 90%;
+}
+
+.poster h1{
+    font-size: 100px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-family: geogia,serif;
 }

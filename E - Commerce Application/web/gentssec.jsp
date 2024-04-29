@@ -11,10 +11,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Mens Section</title>
         <!--custom CSS-->
-        <link href="gentssec.css" rel="stylesheet">
+        <link href="CSS/gentssec.css" rel="stylesheet">
     </head>
-    <body class="body-fixed">
-        <div class="men">
+    <body>
+        <div class="container">
             
         <!--Nav Bar-->
             <div class="navbar">
@@ -36,11 +36,75 @@
             </div>
             
         <!--poster-->
+        <div class="men">
         <div class="poster">
             <h1>Mens<span>Fashion</span></h1>
         </div>
+            <div class="mens">
+            <div class="men casual">
+                <h2>Casual Outfit</h2>
+                <div class="mens_box">
+                    <div class="mens_card">
+                        <div class="mens_image">
+                            <% session.setAttribute("Image", request.getParameter("Image")); %>
+                        </div>
+                        <div class="mens_info">
+                            <h2><%session.setAttribute("Description", request.getParameter("Description"));%></h2>
+                        
+                            <h3><%session.setAttribute("Price",request.getParameter("Price"));%></h3>
+                            <a href="#" class="cart_btn">Add to Cart</a>
+                            <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                    
+                </div>.
+                
+                    <div class="mens_card">
+                        <div class="mens_image">
+                            <% session.setAttribute("Image", request.getParameter("Image")); %>
+                        </div>
+                            <div class="mens_info">
+                            <h2><%session.setAttribute("Description", request.getParameter("Description"));%></h2>
+                        
+                            <h3><%session.setAttribute("Price",request.getParameter("Price"));%></h3>
+                            <a href="#" class="cart_btn">Add to Cart</a>
+                            <a href="#" class="menu_btn">Order Now</a>
+                            </div>
+                    
+                    </div>
+                    <div class="mens_card">
+                        <div class="mens_image">
+                            <% session.setAttribute("Image", request.getParameter("Image")); %>
+                        </div>
+                        <div class="mens_info">
+                            <h2><%session.setAttribute("Description", request.getParameter("Description"));%></h2>
+                        
+                            <h3><%session.setAttribute("Price",request.getParameter("Price"));%></h3>
+                            <a href="#" class="cart_btn">Add to Cart</a>
+                            <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                    
+                    </div>
+                    <div class="mens_card">
+                        <div class="mens_image">
+                            <% session.setAttribute("Image", request.getParameter("Image")); %>
+                        </div>
+                        <div class="mens_info">
+                            <h2><%session.setAttribute("Description", request.getParameter("Description"));%></h2>
+                        
+                            <h3><%session.setAttribute("Price",request.getParameter("Price"));%></h3>
+                            <a href="#" class="cart_btn">Add to Cart</a>
+                            <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                    
+                </div>                            
+                            
+                </div>
+            </div>
+            
+        </div>
             
             
+        </div>
         </div>
     </body>
 </html>

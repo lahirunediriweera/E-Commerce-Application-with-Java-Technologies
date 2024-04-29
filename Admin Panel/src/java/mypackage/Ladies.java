@@ -43,12 +43,8 @@ class Ladies {
             Connection con = DriverManager.getConnection(url, "root", "");
             st = con.createStatement();
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(Gents.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Ladies.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    void inserKids(int id, String name, String description, String price, String amount, String picture) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     void inserLadies(int id, String name, String description, String price, String amount, String picture) {

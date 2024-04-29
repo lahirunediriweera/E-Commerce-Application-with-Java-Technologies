@@ -28,7 +28,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
     
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/shop";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/bloomshop";
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASSWORD = "";
 
@@ -137,7 +137,7 @@ public class LoginServlet extends HttpServlet {
             try {
                 // Establishing database connection
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shop", "root", "");
+                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bloomshop", "root", "");
 
                 // Query to retrieve password for the given email
                 String query = "SELECT password FROM admin WHERE email = ?";

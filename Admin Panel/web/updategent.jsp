@@ -86,12 +86,12 @@
             <input type="text" id="editName" name="name"><br><br>
             <label for="editDescription">Description:</label>
             <input type="text" id="editDescription" name="description"><br><br>
-            <label for="editAuthor">Price:</label>
+            <label for="editPrice">Price:</label>
             <input type="text" id="editPrice" name="price"><br><br>
-            <label for="editAmount">Quantity:</label>
+            <label for="editQuantity">Quantity:</label>
             <input type="text" id="editQuantity" name="quantity"><br><br>
-            <label for="editPicture">Image:</label>
-            <input type="file" id="editPicture" name="picture"><br><br>
+            <label for="editImage">Image:</label>
+            <input type="file" id="editImage" name="image"><br><br>
             <input name="btn" type="submit" value="Update">
         </form>
     </div>

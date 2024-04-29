@@ -110,9 +110,9 @@ public class UpdateGentServlet extends HttpServlet {
             con.close();
            
             if (rowsAffected > 0) {
-                out.println("<h3>Book with ID updated successfully!</h3>");
+                out.println("<h3>New Item updated successfully!</h3>");
             } else {
-                out.println("<h3>Failed to update book with ID !</h3>");
+                out.println("<h3>Failed to update New Item!</h3>");
             }
         } catch (Exception e) {
             out.println("<h3>Error: " + e.getMessage() + "</h3>");

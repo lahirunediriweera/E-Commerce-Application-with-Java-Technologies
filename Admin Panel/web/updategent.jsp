@@ -15,7 +15,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Update Item</title>
         <script>
-        function openEditPopup(gentsId, name, description, price, quantity) {
+        function openEditPopup(gentsId, name, description, price, quantity, image) {
             document.getElementById('editId').value = gentsId;
             document.getElementById('editName').value = name;
             document.getElementById('editDescription').value = description;
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/bstyle.css">
     </head>
     <body>
-    <div class="container">
+        <div class="container"><br><br>
         <h1>Gents Items Update Section</h1>
         <a href="Gents.jsp"><input type="submit" value="Back" class="btn"></a>
     <div class="product-display">

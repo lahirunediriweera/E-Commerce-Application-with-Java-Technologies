@@ -23,7 +23,7 @@
                     <li>
                         <a href="#">
                             <span class="icon"><ion-icon name="storefront"></ion-icon></span>
-                            <span class="title">Brand Name</span>
+                            <span class="title" style="font-size: 23px">Bloom Fashion</span>
                         </a>
                     </li>
                     

@@ -62,7 +62,7 @@
 
             <tr>
                 <td><%=rs.getInt("ladiesId")%></td>
-                <td><%=rs.getString("image")%></td>
+                <td><img src="images/<%=rs.getString("image")%>" alt="Product Image" style="width:100px;height:100px"></td>
                 <td><%=rs.getString("name")%></td>
                 <td><%=rs.getString("description")%></td>
                 <td><%=rs.getString("price")%></td>
@@ -90,7 +90,7 @@
             <label for="editAuthor">Price:</label>
             <input type="text" id="editPrice" name="price"><br><br>
             <label for="editAmount">Quantity:</label>
-            <input type="text" id="editQuantity" name="amount"><br><br>
+            <input type="text" id="editQuantity" name="quantity"><br><br>
             <label for="editPicture">Image:</label>
             <input type="file" id="editImage" name="image"><br><br>
             <input name="btn" type="submit" value="Update">

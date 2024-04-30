@@ -43,7 +43,7 @@ class Ladies {
             Connection con = DriverManager.getConnection(url, "root", "");
             st = con.createStatement();
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(Ladies.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Ladies.class.getName()).log(Level.SEVERE, "Error inserting data", ex);
         }
     }
 

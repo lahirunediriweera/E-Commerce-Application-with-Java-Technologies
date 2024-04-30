@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="css/view.css">
     </head>
     <body>
-        <div class="container"><br>
+        <div class="container"><br><br>
         <h1>Gents Items Section</h1>
         <a href="home.jsp"><input type="submit" value="Back" class="sbtn"></a>
         <a href="addgentsitem.jsp"><input type="submit" value="Add New" class="sbtn"></a>

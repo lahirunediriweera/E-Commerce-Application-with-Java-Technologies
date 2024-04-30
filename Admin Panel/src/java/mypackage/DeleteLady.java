@@ -25,7 +25,7 @@ public class DeleteLady extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        int id = Integer.parseInt(request.getParameter("id"));
+        int ladiesId = Integer.parseInt(request.getParameter("ladiesId"));
         
         try {
             String url = "jdbc:mysql://localhost:3306/bloomshop";
@@ -36,7 +36,7 @@ public class DeleteLady extends HttpServlet {
             
             String query = "DELETE FROM ladies WHERE ladiesId=?";
             PreparedStatement st = con.prepareStatement(query);
-            st.setInt(1, id);
+            st.setInt(1, ladiesId);
             
             int rowsAffected = st.executeUpdate();
             
@@ -44,9 +44,9 @@ public class DeleteLady extends HttpServlet {
             con.close();
             
             if (rowsAffected > 0) {
-                out.println("<h3>Ladies Item with ID " + id + " deleted successfully!</h3>");
+                out.println("<h3>Ladies Item with ID " + ladiesId + " deleted successfully!</h3>");
             } else {
-                out.println("<h3>Failed to delete Ladies Item with ID " + id + "!</h3>");
+                out.println("<h3>Failed to delete Ladies Item with ID " + ladiesId + "!</h3>");
             }
         } catch (Exception e) {
             out.println("<h3>Error: " + e.getMessage() + "</h3>");

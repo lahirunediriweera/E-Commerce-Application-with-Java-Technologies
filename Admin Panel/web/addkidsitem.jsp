@@ -16,9 +16,8 @@
         <div class="container">
         <h1>ADD NEW ITEM FOR KIDS SECTION</h1>
         <p></p>
-        <form action="KidServlet" method="POST">
+        <form action="KidServlet" method="POST" enctype="multipart/form-data">
             <div class="row">
-                
                 <div class="column">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Name here">
@@ -39,7 +38,7 @@
                 </div>
                 <div class="column">
                     <label for="itempic">Item Image</label>
-                    <input type="file" name="itempic">
+                    <input type="file" accept="image/jpeg,image/png,image/jpg" name="itempic">
                 </div>
             </div>
             <div class="row">

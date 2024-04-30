@@ -5,19 +5,27 @@
  */
 package mypackage;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 /**
  *
  * @author USER
  */
 @WebServlet(name = "KidServlet", urlPatterns = {"/KidServlet"})
+@MultipartConfig
 public class KidServlet extends HttpServlet {
 
     /**
@@ -77,13 +85,26 @@ public class KidServlet extends HttpServlet {
         String description = request.getParameter("description");
         int price = Integer.parseInt(request.getParameter("price"));
         int quantity = Integer.parseInt(request.getParameter("quantity"));
-        String image = request.getParameter("itempic");
+        
+        Part filePart = request.getPart("itempic");
+        String imageFileName = filePart.getSubmittedFileName();
+        String uploadDirectory = "E:\\Git Save\\E-Commerce-Application-with-Java-Technologies\\Admin Panel\\web\\images\\";
+        
+        File uploadDir = new File(uploadDirectory);
+        if (!uploadDir.exists()) {
+        uploadDir.mkdirs();
+        }
+        
+        String uploadPath = uploadDirectory + File.separator + imageFileName;
+        try (InputStream is = filePart.getInputStream()) {
+        Files.copy(is, Paths.get(uploadPath), StandardCopyOption.REPLACE_EXISTING);
+        }
         
         PrintWriter out = response.getWriter();
         out.println("This Item Added Kids Section Successfully....");
         
         Kids b = new Kids();
-        b.insertKids(name,description,price,quantity,image);
+        b.insertKids(name,description,price,quantity,imageFileName);
         //processRequest(request, response);
     }
 

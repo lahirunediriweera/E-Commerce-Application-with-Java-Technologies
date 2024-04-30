@@ -16,7 +16,7 @@
         <div class="container">
         <h1>ADD NEW ITEM FOR GENTS SECTION</h1>
         <p></p>
-        <form action="GentServlet" method="POST">
+        <form action="GentServlet" method="POST" enctype="multipart/form-data">
             <div class="row">
                 <div class="column">
                     <label for="name">Name</label>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="column">
                     <label for="itempic">Item Image</label>
-                    <input type="file" name="itempic">
+                    <input type="file" accept="image/jpeg,image/png,image/jpg" name="itempic">
                 </div>
             </div>
             <div class="row">

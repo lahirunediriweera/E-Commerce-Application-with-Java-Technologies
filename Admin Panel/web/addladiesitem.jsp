@@ -16,7 +16,7 @@
         <div class="container">
         <h1>ADD NEW ITEM FOR LADIES SECTION</h1>
         <p></p>
-        <form action="LadyServlet" method="POST">
+        <form action="LadyServlet" method="POST" enctype="multipart/form-data">
             <div class="row">
                 <div class="column">
                     <label for="name">Name</label>
@@ -33,12 +33,12 @@
             </div>
             <div class="row">
                 <div class="column">
-                    <label for="amount">Amount</label>
-                    <input type="number" id="amount" name="amount" placeholder="Amount here">
+                    <label for="amount">Quantity</label>
+                    <input type="number" id="amount" name="quantity" placeholder="Amount here">
                 </div>
                 <div class="column">
-                    <label for="itempic">Item Picture</label>
-                    <input type="file" name="itempic">
+                    <label for="itempic">Item Image</label>
+                    <input type="file" accept="image/jpeg,image/png,image/jpg" name="itempic">
                 </div>
             </div>
             <div class="row">

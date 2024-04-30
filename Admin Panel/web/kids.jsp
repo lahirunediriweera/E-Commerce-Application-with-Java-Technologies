@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="css/views.css">
     </head>
     <body>
-    <div class="container">
+        <div class="container"><br><br>
         <h1>Kids Items Section</h1>
         <a href="home.jsp"><input type="submit" value="Back" class="sbtn"></a>
         <a href="addkidsitem.jsp"><input type="submit" value="Add New" class="sbtn"></a>
@@ -49,7 +49,7 @@
                 
                 <tr>
                     <td><%=rs.getInt("kidsId")%></td>
-                    <td><%=rs.getString("image")%></td>
+                    <td><img src="images/<%=rs.getString("image")%>" alt="Product Image" style="width:100px;height:100px"></td>
                     <td><%=rs.getString("name")%></td>
                     <td><%=rs.getString("description")%></td>
                     <td><%=rs.getInt("price")%></td>

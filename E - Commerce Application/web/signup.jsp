@@ -34,7 +34,7 @@
                     </tr>
                     <tr>
                         <th>Contact Number</th>                      
-                        <td><input type="text" name="contactno" placeholder="Contact Number"value="" size="38" /></td>
+                        <td><input type="text" name="contact" placeholder="Contact Number"value="" size="38" /></td>
                     </tr>
                     <tr>
                         <th>E-mail</th>                        

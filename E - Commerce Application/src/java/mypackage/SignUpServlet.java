@@ -77,11 +77,11 @@ public class SignUpServlet extends HttpServlet {
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String address = request.getParameter("address");
-        String contact = request.getParameter("contactno");
+        String contactno = request.getParameter("contact");
         String email = request.getParameter("email");
         String pwd = request.getParameter("pwd");
         String cpwd = request.getParameter("cpwd");
-        int contactno;
+        int contact;
 
         PrintWriter out = response.getWriter();
         
@@ -116,21 +116,21 @@ public class SignUpServlet extends HttpServlet {
         }
         
         //Validate ContactNo
-        if(contact== null || contact.length()== 0 || contact.equals(" ")){
+        if(contactno== null || contactno.length()== 0 || contactno.equals(" ")){
             out.println("<h4 style='color:red'> Contact Number is required.</h4>");
             return;
         }
-        else if(contact.length()> 10){
+        else if(contactno.length()> 10){
             out.println("<h4 style='color:red'>Contact Number must be 10 digits.</h4>");
             return; 
         }      
-        else if (contact.length()< 10) {
+        else if (contactno.length()< 10) {
                    out.println("<h4 style='color:red'>Contact Number must be 10 digits.</h4>");
                     return; 
         }
         else{
             try {  
-                contactno = Integer.parseInt(contact);
+                contact = Integer.parseInt(contactno);
             } 
             catch(NumberFormatException nfe) {
                 out.println("<h4 style='color:red'>Contact Number must be numeric.</h4>");
@@ -183,7 +183,7 @@ public class SignUpServlet extends HttpServlet {
   
         out.println("<h2 style='color:green'>successfully registered.");
         User us = new User();
-        us.insertUser(fname,lname,address,contactno,email,pwd,cpwd);
+        us.insertUser(fname,lname,address,contact,email,pwd,cpwd);
         out.close();
         //processRequest(request, response);
     }

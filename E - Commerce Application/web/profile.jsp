@@ -1,16 +1,26 @@
 <%-- 
     Document   : profile
-    Created on : Apr 28, 2024, 4:51:49 PM
+    Created on : Apr 26, 2024, 12:04:49 AM
     Author     : wiman
 --%>
 
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%  String driver= "com.mysql.jdbc.Driver";
+    Class.forName(driver); %>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    <link rel="stylesheet" href="CSS/profile.css">
+        <title>Profile Page</title>
+        <link rel="stylesheet" href="CSS/profile.css">
+        
     </head>
     <body>
         <div class="container">
@@ -36,53 +46,77 @@
             <div class="userprofile">
                 <h1>Profile</h1>
             </div>
-            <form action="ProfileServlet" method="GET">
-            
-            <div class="table">  
-            <table border="0">
-                <tr>
-                    <th>First Name</th> 
-                </tr>
-                <tr>
-                    <th>Last Name</th>
-                </tr>
-                <tr>
-                    <th>Address</th>
-                </tr>
-                <tr>
-                    <th>Contact No</th>
-                </tr>
-                <tr>
-                    <th>E-mail</th>
-                </tr>  
-                
-                
-                <%  String fname="";
-                    Cookie cookie = null;
-                    Cookie[] cookies = null;
-                    cookies = request.getCookies();
-                    if( cookies != null){
-                        for (int i = 0; i < cookies.length; i++){
-                            cookie = cookies[i];
-                            String b = cookie.getComment();
-                            request.setAttribute("fname", fname);
-                           // request.setAttribute("First Name", fname);
-                           // request.setAttribute("First Name", fname);
-                        }
-                        System.out.println(fname);
-                    }
-                    
-                %>
-                
-            
-               
              
+            <table border="0">
+                <tbody>
+                    <%!
+                        public class Customer{
+                            String url="jdbc:mysql://localhost:3306/bloomshop";
+                            
+                            Connection con= null;
+                            PreparedStatement ps= null;
+                            ResultSet rs= null;
+                            
+                            public Customer(){
+                                try{
+                                    con=DriverManager.getConnection(url, "root", "");
+                                    String query= "select fname,lname,address,contact,email"+" from customer "+"where email=?" ;
+                                    ps=con.prepareStatement(query);
+                                }catch(SQLException ex){
+                                    ex.printStackTrace();
+                                }
+                                
+                            }
+                            public ResultSet getCustomer(String email){
+                                try{
+                                    ps.setString(1,email);
+                                    rs=ps.executeQuery();
+                                }catch(SQLException ex){
+                                    ex.printStackTrace();
+                                }
+                                return rs;
+                            }
+                             
+                        }
+                    %>
+                    <%
+                        String email= new String();
                         
-            </table>
-       </div>
-       </form>
+                        if(request.getParameter("email") != null){
+                            email= request.getParameter("email");
+                        }
+                        
+                        Customer cus = new Customer();
+                        ResultSet rs = cus.getCustomer(email);
+                    %>
+                <table border="0">
+                    <tbody>
+                        <% if(rs.next()){ %>
+                        <tr>
+                            <td>First Name</td>
+                            <td><input type="text" name="fname" value="" /><%=rs.getString("fname")%></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name</td>
+                            <td><input type="text" name="lname" value="" /><%=rs.getString("lname")%></td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td><input type="text" name="address" value="" /><%=rs.getString("addreess")%></td>
+                        </tr>
+                        <tr>
+                            <td>Contact No</td>
+                            <td><input type="text" name="contact" value="" /><%=rs.getString("contact")%></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type="text" name="email" value="" /><%=rs.getString("email")%></td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
 
-                         
+               
         <div class="footer">
                 <footer>
                     <h4>Contact No:</h4>

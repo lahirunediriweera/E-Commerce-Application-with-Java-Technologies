@@ -18,11 +18,9 @@ import java.util.logging.Logger;
  */
 public class User {
     PreparedStatement ps;
-    String query;
-    
+    String query;    
     void insertUser(String fname, String lname, String address, int contact, String email, String pwd, String cpwd) {
-        query="insert into customer(fname,lname,address,contact,email,pwd,cpwd) values('"+fname+"','"+lname+"','"+address+"',"+contact+",'"+email+"','"+pwd+"','"+cpwd+"') "; 
-        
+        query="insert into customer(fname,lname,address,contact,email,pwd,cpwd) values('"+fname+"','"+lname+"','"+address+"',"+contact+",'"+email+"','"+pwd+"','"+cpwd+"') ";         
         connectToDB();
             try {                                   
                 ps.executeUpdate(query);
@@ -33,13 +31,11 @@ public class User {
                 ps.setInt(4, contact);
                 ps.setString(5, email);
                 ps.setString(6, pwd);
-                ps.setString(7, cpwd);
- 
+                ps.setString(7, cpwd); 
             }catch (SQLException ex) {
                 System.out.println(ex.getMessage());           
             } 
-    }
-    
+    }    
     private void connectToDB() {
         String driver= "com.mysql.jdbc.Driver";
         String url="jdbc:mysql://localhost:3306/bloomshop";
@@ -50,6 +46,5 @@ public class User {
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    
+    }   
 }

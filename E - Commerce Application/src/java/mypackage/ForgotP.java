@@ -36,9 +36,6 @@ class ForgotP {
         {
            System.out.println(ex.getMessage());
         }
-        
-        
-        
     }
 
     private void connectToDB() {

@@ -11,36 +11,43 @@
         <title>Checkout JSP page </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
+        <link rel="stylesheet" href="CSS/checkout.css">
+        <link rel="stylesheet" href="CSS/home.css">
+=======
+        <!--<link rel="stylesheet" href="CSS/checkout.css">-->
+>>>>>>> Stashed changes
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     </head>
     <body>
         <div class="container wrapper">
-            <div class="row cart-head">
-                <div class="container">
-                <div class="row">
-                    <p></p>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Image/Logo.jpg" width="50" height="40"> 
                 </div>
-                <div class="row">
-                    <div style="display: table; margin: auto;">
-                        <span class="step step_complete"> <a href="#" class="check-bc">Cart</a> <span class="step_line step_complete"> </span> <span class="step_line backline"> </span> </span>
-                        <span class="step step_complete"> <a href="#" class="check-bc">Checkout</a> <span class="step_line "> </span> <span class="step_line step_complete"> </span> </span>
-                        <span class="step_thankyou check-bc step_complete">Thank you</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <p></p>
-                </div>
-                </div>
-            </div>    
+            <nav>
+                <ul>
+                    <li><a href="home.jsp">Home</a></li>
+                    <li><a href="ladiessec.jsp">Ladies Section</a></li>
+                    <li><a href="gentssec.jsp">Gents Section</a></li>
+                    <li><a href="kidssec.jsp">Kids Section</a></li>
+                    <li class="rightcorner"><a href="profile.jsp">Profile</a></li>
+                    <li class="rightcorner"><a href="index.jsp.html">Logout</a></li>
+                    <li class="rightcorner"><a href="cart.jsp">Cart</a></li>
+                    <li class="rightcorner"><a href="search.jsp">Search</a></li>
+                </ul>
+            </nav> 
+            </div>
+                
             <div class="row cart-body">
                 <form class="form-horizontal" method="post" action="">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-push-6 col-sm-push-6">
                     <!--REVIEW ORDER-->
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            Review Order <div class="pull-right"><small><a class="afix-1" href="#">Edit Cart</a></small></div>
+                            Order Summery <div class="pull-right"><small><a class="afix-1" href="cart.jsp">Edit Cart</a></small></div>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
@@ -106,11 +113,11 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
                     <!--SHIPPING METHOD-->
                     <div class="panel panel-info">
-                        <div class="panel-heading">Address</div>
+                        <div class="panel-heading">Shipping Information</div>
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <h4>Shipping Address</h4>
+                                    <h4>Personal Details </h4>
                                 </div>
                             </div>
                             
@@ -123,6 +130,11 @@
                                 <div class="col-md-6 col-xs-12">
                                     <strong>Last Name:</strong>
                                     <input type="text" name="last_name" class="form-control" value="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <h4>Shipping Address</h4>
                                 </div>
                             </div>
                             <div class="form-group">

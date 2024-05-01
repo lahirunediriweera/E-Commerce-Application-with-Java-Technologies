@@ -120,13 +120,10 @@ public class ForgotPServlet extends HttpServlet {
             out.println("<h4 style='color:red'> Confirm password is does not match</h4>");
             return;           
         } 
-        }
-    
-    ForgotP fp= new ForgotP();
-    
-    fp.insertDetails(email,Npwd,Cpwd);
         
     
+       ForgotP fp= new ForgotP();
+       fp.insertDetails(email,Npwd,Cpwd);
        // processRequest(request, response);
     }
 

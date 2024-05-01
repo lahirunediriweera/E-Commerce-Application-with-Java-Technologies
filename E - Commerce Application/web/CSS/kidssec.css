@@ -47,7 +47,7 @@ li.rightcorner {
 /* Poster */
 
 .poster {
-    background-image: url(../Image/gentsmain.jpg);
+    background-image: url(../Image/kidsmain.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -126,6 +126,11 @@ li.rightcorner {
 }
 
 .kids .kids_box .kids_card .kids_info h3 {
+    width: 100%; /* Changed from 60% */
+    text-align: center;
+    margin: 0 auto;
+}
+.kids .kids_box .kids_card .kids_info h4 {
     width: 100%; /* Changed from 60% */
     text-align: center;
     margin: 0 auto;

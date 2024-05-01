@@ -1,65 +1,133 @@
-body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-}
-
-.kid-section {
-    padding: 50px 0;
+/* Poster Section */
+.poster {
+    position: relative;
+    background-image: url(../Image/kidsmain.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.kid-section h1 {
-    font-size: 36px;
-    color: #ff5f5f;
-    margin-bottom: 40px;
+.poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 204, 0, 0.5); /* Yellow overlay with transparency */
 }
 
-.clothing-items {
+.poster h1 {
+    font-size: 80px; /* Decreased font size for better readability */
+    font-family: 'Comic Sans MS', cursive; /* Fun and playful font */
+    color: #333; /* Dark text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better contrast */
+    margin-bottom: 20px; /* Reduced margin for better spacing */
+}
+
+.poster span {
+    color: #ff6699; /* Pink accent color */
+}
+
+/* Kids Section */
+.kids {
+    width: 100%;
+    padding: 50px 0;
+}
+
+/* Casual outfits */
+.kids .casual h2 {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 36px;
+    color: #ff6699; /* Pink accent color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.kids .kids_box {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.kids .kids_card {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.kids .kids_card:hover {
+    transform: translateY(-5px);
+}
+
+.kids .kids_box .kids_card .kids_image {
+    width: 250px;
+    height: 215px;
+    margin: 0 auto 6px;
+    overflow: hidden;
+}
+
+
+.kids .kids_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.kids .kids_info {
+    padding: 20px;
+    text-align: center;
+}
+
+.kids .kids_info p {
+    font-size: 18px;
+    color: #666; /* Gray text color */
+    margin-bottom: 10px;
+}
+
+.kids .kids_info h3 {
+    font-size: 24px;
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+}
+
+.kids .kids_info h4 {
+    font-size: 16px;
+    color: #666; /* Gray text color */
+    margin-bottom: 20px;
+}
+
+.kids .btn-group {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
-.item {
-    width: 300px;
-    margin: 0 20px 40px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-.item img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.kids .btn-group a {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff6699; /* Pink button color */
+    border-radius: 30px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.item h2 {
-    margin-top: 10px;
-    font-size: 24px;
-    color: #333;
-}
-
-.item p {
-    font-weight: bold;
-    color: #ff5f5f;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-button {
-    background-color: #ff5f5f;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #e05252;
+.kids .btn-group a:hover {
+    background-color: #ff3366; /* Darker pink on hover */
 }

@@ -49,7 +49,7 @@
                         
                         <div class="kids_card">
                             <div class="kids_image">
-                                <img src="Image/<%=rs.getString("image")%>" alt="Product Image" style="width:100px;height:100px">
+                                <img src="Image/<%=rs.getString("image")%>" alt="Product Image" style="width:200px;height:200px">
                             </div>
                             <div class="kids_info">
                                 <p><%=rs.getString("description")%></p>
@@ -65,6 +65,7 @@
                                 
                       <% } %>
                      
+                       
                     </div>
                 </div>
             </div>

@@ -72,7 +72,57 @@ public class addgenitemServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+<<<<<<< Updated upstream:Admin Panel/src/java/mypackage/addgenitemServlet.java
         processRequest(request, response);
+=======
+        
+       PrintWriter out = response.getWriter();
+        
+        String email = request.getParameter("email");
+        String pwd = request.getParameter("password");
+        
+         try{
+        if (email != null && pwd != null) {
+            String driver= "com.mysql.jdbc.Driver";
+            String url="jdbc:mysql://localhost:3306/userdb";
+            try {
+                Class.forName(driver);
+                Connection con = DriverManager.getConnection(url, "root", "");
+                String query = "SELECT pwd FROM user WHERE email = ?";
+                PreparedStatement ps = con.prepareStatement(query);
+                ps.setString(1, email);
+                ResultSet rs = ps.executeQuery();
+                
+                 if (rs.next()) {
+                    String dbpwd = rs.getString("pwd");
+                    if (pwd.equals(dbpwd)) {
+                        HttpSession httpSession = request.getSession();
+                        httpSession.setAttribute("emailId", email);
+                        response.sendRedirect("home.jsp");
+                    } 
+                    else {
+                        response.sendRedirect("signin.jsp?error=email");
+                    }
+                    rs.close();
+                    ps.close();
+                    con.close();
+                }
+
+            } catch(ClassNotFoundException | SQLException ex) {
+                Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+            } 
+        }
+        
+        }
+        catch(Exception ex){
+            out.println("Error");
+        }
+        
+        Cookie coo = new Cookie("Email" , email);
+        response.addCookie(coo);
+  
+        //processRequest(request, response);
+>>>>>>> Stashed changes:E - Commerce Application/src/java/mypackage/LoginServlet.java
     }
 
     /**

@@ -3,7 +3,6 @@
     Created on : Apr 26, 2024, 12:04:49 AM
     Author     : wiman
 --%>
-
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.ResultSet"%>
@@ -115,8 +114,7 @@
                         <% } %>
                     </tbody>
                 </table>
-
-               
+              
         <div class="footer">
                 <footer>
                     <h4>Contact No:</h4>

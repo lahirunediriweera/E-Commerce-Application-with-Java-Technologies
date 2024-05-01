@@ -84,10 +84,7 @@ and open the template in the editor.
                         <img src="Image/master.png" alt="mastercard">
                     </div>
                 </footer>   
-           </div>
-            
-            
-            
+           </div>           
         </div>
     </body>
 </html>

@@ -9,7 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<<<<<<< Updated upstream
         <title>JSP Page</title>
+=======
+        <link rel="stylesheet" href="CSS/signin.css">
+        <title>Login</title>
+>>>>>>> Stashed changes
     </head>
     <body>
         <div><center>

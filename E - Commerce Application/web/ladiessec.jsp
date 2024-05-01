@@ -23,7 +23,7 @@
 <body>
     <div class="container">
         <!--Header-->
-        <jsp:include page="header.jsp" />
+        <jsp:include page="header.jsp" />
         
         <!-- Poster -->
         <div class="ladies">
@@ -49,11 +49,13 @@
                         <!-- First card -->
                         <div class="lady_card">
                             <div class="lady_image">
-                                <img src="<%=rs.getString("image")%>" alt="Product Image" style="width:100px;height:100px">
+                                <img src="Image/<%=rs.getString("image")%>" alt="Product Image" style="width:200px;height:\200px">
                             </div>
                             <div class="lady_info">
                                 <p><%=rs.getString("description")%></p>
                                 <h3><%=rs.getString("name")%></h3>
+                                 <h3>Rs <%=rs.getString("price")%>.00</h3>
+                                  <h3>Available only <%=rs.getString("quantity")%> units</h3>
                                 <div class="btn-group">
                                     <a href="#" class="cart_btn">Add to Cart</a>
                                     <a href="#" class="order_btn">Order Now</a>
@@ -68,8 +70,7 @@
             </div>
         </div>
                       <!--Footer-->
-                      <jsp:include page="footer.jsp" />
-    </div>
+                <jsp:include page="footer.jsp" />       
+    </div> 
 </body>
 </html>
-

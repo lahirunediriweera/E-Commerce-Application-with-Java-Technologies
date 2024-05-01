@@ -1,150 +1,66 @@
-* {
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
+    background-color: #f8f8f8;
 }
 
-.container {
-    width: 100%;
-    height: 90px;
-    background: linear-gradient(to right, #004cff, #00c4fc, #00bdfa, #00b5f7, #00adf5, #00a6f2, #009ef0, #0096ed, #008feb, #0087e8, #0080e6, #0078e3, #0070e0, #0069de, #0061db, #0059d9, #0052d6);
-}
-
-/* NavBar */
-
-.navbar {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-
-nav {
-    flex: 1;
-    align-items: center;   
-}
-
-nav ul li {
-    float: left;
-    text-decoration: none;
-    list-style: none;
-    padding: 20px;
-    font-size: 20px;
-}
-
-nav ul li a:hover {
-    background-color: #38007d;   
-}
-
-li a {
-    color: white;
-    text-decoration: none;
-}
-
-li.rightcorner {
-    float: right;
-}
-
-/* Poster */
-
-.poster {
-    background-image: url(../Image/gentsmain.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    justify-content: center;
-    padding: 280px 150px 200px;
-    width: 100%;
-    height: 90%;
-}
-
-.poster h1 {
-    font-size: 100px;
-    text-align: center;
-    margin-bottom: 50px;
-    font-family: georgia, serif;
-    color: black;
-}
-
-.poster h1 span {
-    margin-left: 20px;
-}
-
-/* Kids */
-
-.kids {
-    width: 100%;
+.kid-section {
     padding: 50px 0;
-}
-
-/* Casual outfits */
-
-.kids .kid h2 {
-    margin: 10px;
-    margin-left: 50px;
-}
-
-.kids .kids_box {
-    width: 95%;
-    margin: 0 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-    grid-gap: 10px;
-}
-
-.kids .kids_box .kids_card {
-    width: 275px;
-    height: 420px;
-    padding-top: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.kids .kids_box .kids_card .kids_image {
-    width: 250px;
-    height: 215px;
-    margin: 0 auto 6px;
-    overflow: hidden;
-}
-
-.kids .kids_box .kids_card .kids_image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: 0.5s;
-}
-
-.kids .kids_box .kids_card .kids_info {
-    padding: 0 20px; /* Changed from auto 1000px */
-}
-
-.kids .kids_box .kids_card .kids_info p {
-    width: 100%; /* Changed from 60% */
     text-align: center;
-    margin: 0 auto;
-    font-size: 23px;  
 }
 
-.kids .kids_box .kids_card .kids_info h3 {
-    width: 100%; /* Changed from 60% */
-    text-align: center;
-    margin: 0 auto;
+.kid-section h1 {
+    font-size: 36px;
+    color: #ff5f5f;
+    margin-bottom: 40px;
 }
 
-.kids .kids_box .kids_card .kids_info .btn-group {
-    padding: 20px;
-}
-
-.kids .kids_box .kids_card .kids_info .btn-group .cart_btn,
-.kids .kids_box .kids_card .kids_info .btn-group .order_btn {
+.clothing-items {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-decoration: none;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 300px;
+    margin: 0 20px 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.item h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.item p {
+    font-weight: bold;
+    color: #ff5f5f;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #ff5f5f;
     color: white;
-    background: #000;
-    padding: 8px 5px;
-    margin: 5px auto; /* Changed from 5px 70px */
-    transition: 0.3s;
-    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e05252;
 }

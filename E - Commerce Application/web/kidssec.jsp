@@ -23,23 +23,7 @@
 <body>
     <div class="container">
         <!-- Nav Bar -->
-        <div class="navbar">
-            <div class="logo">
-                <img src="Image/Logo.jpg" width="50" height="40"> 
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Ladies Section</a></li>
-                    <li><a href="#">Gents Section</a></li>
-                    <li><a href="#">Kids Section</a></li>                                             
-                    <li class="rightcorner"><a href="">Register</a></li>
-                    <li class="rightcorner"><a href="login.jsp">Login</a></li>
-                    <li class="rightcorner"><a href="#">Cart</a></li>
-                    <li class="rightcorner"><a href="#">Search</a></li>
-                </ul>
-            </nav> 
-        </div>
+        <jsp:include page="header.jsp" />
         <!-- Poster -->
         <div class="kids">
             <div class="poster">
@@ -48,7 +32,7 @@
             <!-- Kids Section -->
             <div class="kids">
                 <div class="kids casual">
-                 <h2>Casual Outfit</h2>
+                 <h2>Welcome to kids section</h2>
                     <div class="kids_box">
                         
                         <%
@@ -70,6 +54,8 @@
                             <div class="kids_info">
                                 <p><%=rs.getString("description")%></p>
                                 <h3><%=rs.getString("name")%></h3>
+                                <p>Rs <%=rs.getString("price")%>.00</p>
+                                <p>Available only <%=rs.getString("Quantity")%> units</p>
                                 <div class="btn-group">
                                     <a href="#" class="cart_btn">Add to Cart</a>
                                     <a href="#" class="order_btn">Order Now</a>
@@ -84,6 +70,7 @@
             </div>
         </div>
     </div>
+                      
 </body>
 </html>
 

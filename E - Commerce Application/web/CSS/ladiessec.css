@@ -1,18 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;    
-}
-
-.container {
-    width: 100%;
-    height: 90px;
-    background: linear-gradient(to right, #004cff, #00c4fc, #00bdfa, #00b5f7, #00adf5, #00a6f2, #009ef0, #0096ed, #008feb, #0087e8, #0080e6, #0078e3, #0070e0, #0069de, #0061db, #0059d9, #0052d6);
-}
-
-/* Poster */
-
+/* Poster Section */
 .poster {
+    position: relative;
     background-image: url(../Image/ladiesmain.jpg);
     background-size: cover;
     background-position: center;
@@ -23,23 +11,25 @@
     height: 90%;
 }
 
-/* Ladies */
-
+/* Ladies Section */
 .ladies {
     width: 100%;
     padding: 50px 0;
 }
 
 /* Casual outfits */
-
 .ladies .lady h2 {
-    margin: 10px;
-    margin-left: 50px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 36px;
+    color: #ff6699; /* Pink accent color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .ladies .lady_box {
-    width: 95%;
-    margin: 0 50px;
+    width: 90%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
     grid-gap: 10px;
@@ -51,6 +41,7 @@
     padding-top: 10px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #f9f9f9; /* Light gray background */
 }
 
 .ladies .lady_box .lady_card .lady_image {
@@ -69,20 +60,24 @@
 }
 
 .ladies .lady_box .lady_card .lady_info {
-    padding: 0 20px; /* Changed from auto 1000px */
+    padding: 20px;
+    text-align: center;
 }
 
 .ladies .lady_box .lady_card .lady_info p {
-    width: 100%; /* Changed from 60% */
+    width: 100%;
     text-align: center;
     margin: 0 auto;
-    font-size: 23px;  
+    font-size: 18px;
+    color: #333; /* Dark text color */
 }
 
 .ladies .lady_box .lady_card .lady_info h3 {
-    width: 100%; /* Changed from 60% */
+    width: 100%;
     text-align: center;
     margin: 0 auto;
+    font-size: 24px;
+    color: #333; /* Dark text color */
 }
 
 .ladies .lady_box .lady_card .lady_info .btn-group {
@@ -96,9 +91,14 @@
     justify-content: center;
     text-decoration: none;
     color: white;
-    background: #000;
+    background: #ff6699; /* Pink button color */
     padding: 8px 5px;
     margin: 5px auto; /* Changed from 5px 70px */
     transition: 0.3s;
     font-size: 15px;
+}
+
+.ladies .lady_box .lady_card .lady_info .btn-group .cart_btn:hover,
+.ladies .lady_box .lady_card .lady_info .btn-group .order_btn:hover {
+    background: #ff3366; /* Darker pink on hover */
 }

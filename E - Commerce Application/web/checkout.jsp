@@ -43,7 +43,7 @@
                     <!--REVIEW ORDER-->
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            Review Order <div class="pull-right"><small><a class="afix-1" href="cart.jsp">Edit Cart</a></small></div>
+                            Order Summery <div class="pull-right"><small><a class="afix-1" href="cart.jsp">Edit Cart</a></small></div>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
@@ -109,11 +109,11 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
                     <!--SHIPPING METHOD-->
                     <div class="panel panel-info">
-                        <div class="panel-heading">Address</div>
+                        <div class="panel-heading">Shipping Information</div>
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <h4>Shipping Address</h4>
+                                    <h4>Personal Details </h4>
                                 </div>
                             </div>
                             
@@ -126,6 +126,11 @@
                                 <div class="col-md-6 col-xs-12">
                                     <strong>Last Name:</strong>
                                     <input type="text" name="last_name" class="form-control" value="" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <h4>Shipping Address</h4>
                                 </div>
                             </div>
                             <div class="form-group">

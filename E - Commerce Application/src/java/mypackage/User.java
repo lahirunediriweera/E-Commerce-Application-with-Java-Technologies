@@ -20,8 +20,8 @@ public class User {
     PreparedStatement ps;
     String query;
     
-    void insertUser(String fname, String lname, String address, int contactno, String email, String pwd, String cpwd) {
-        query="insert into user(fname,lname,address,contactno,email,pwd,cpwd) values('"+fname+"','"+lname+"','"+address+"',"+contactno+",'"+email+"','"+pwd+"','"+cpwd+"') "; 
+    void insertUser(String fname, String lname, String address, int contact, String email, String pwd, String cpwd) {
+        query="insert into customer(fname,lname,address,contact,email,pwd,cpwd) values('"+fname+"','"+lname+"','"+address+"',"+contact+",'"+email+"','"+pwd+"','"+cpwd+"') "; 
         
         connectToDB();
             try {                                   
@@ -30,7 +30,7 @@ public class User {
                 ps.setString(1, fname);
                 ps.setString(2, lname);
                 ps.setString(3, address);
-                ps.setInt(4, contactno);
+                ps.setInt(4, contact);
                 ps.setString(5, email);
                 ps.setString(6, pwd);
                 ps.setString(7, cpwd);
@@ -42,7 +42,7 @@ public class User {
     
     private void connectToDB() {
         String driver= "com.mysql.jdbc.Driver";
-        String url="jdbc:mysql://localhost:3306/userdb";
+        String url="jdbc:mysql://localhost:3306/bloomshop";
         try {
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, "root", "");

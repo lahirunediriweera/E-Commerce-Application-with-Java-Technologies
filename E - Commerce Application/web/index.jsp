@@ -21,9 +21,9 @@ and open the template in the editor.
             <nav>
                 <ul>
                     <li><a href="home.jsp">Home</a></li>
-                    <li><a href="ladiessec">Ladies Section</a></li>
-                    <li><a href="gentssec">Gents Section</a></li>
-                    <li><a href="kidssec">Kids Section</a></li> 
+                    <li><a href="ladiessec.jsp">Ladies Section</a></li>
+                    <li><a href="gentssec.jsp">Gents Section</a></li>
+                    <li><a href="kidssec.jsp">Kids Section</a></li> 
                     <li class="rightcorner"><a href="signup.jsp">Register</a></li>
                     <li class="rightcorner"><a href="login.jsp">Login</a></li>
                     <li class="rightcorner"><a href="#">Search</a></li>

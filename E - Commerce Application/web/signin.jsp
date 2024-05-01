@@ -29,7 +29,7 @@
                         <td><input type="password" name="password" value="" required/></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><a href="">Forgot Password?</a></td>
+                        <td colspan="2"><a href="forgetpassword.jsp">Forgot Password?</a></td>
                         
                     </tr> <br>
                     <tr>

@@ -31,7 +31,7 @@
             <!-- Kids Section -->
             <div class="kids">
                 <div class="kids casual">
-                 <h2>Casual Outfit</h2>
+                 <h2>Welcome to kids section</h2>
                     <div class="kids_box">
                         
                         <%

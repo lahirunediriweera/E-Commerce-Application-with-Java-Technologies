@@ -23,7 +23,7 @@
                     </ul>
                     
                     <h4>E-mail:</h4>
-                    <a class="myemail" href="mailto:example@gmail.com">example@gmail.com</a>
+                    <a class="myemail" href="mailto:bloomshop@gmail.com">bloomshop@gmail.com</a>
                     
                     <h4>Address:</h4>
                     <p class="place">No.27, Malwaththa Road, Colombo-5, Sri Lanka</p>

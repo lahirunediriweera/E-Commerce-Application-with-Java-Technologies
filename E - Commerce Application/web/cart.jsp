@@ -3,135 +3,121 @@
     Created on : Apr 7, 2024, 12:41:35 AM
     Author     : USER
 --%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
         <link rel="stylesheet" href="CSS/cart.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
     </head>
     <body>
         
-<main class="page">
-    <section class="shopping-cart dark">
-       <div class="container">
-	<div class="block-heading">
-            <h2>Shopping Cart</h2>
-              
-        </div>
-        <div class="content">
-            <div class="row">
-                <div class="col-md-12 col-lg-8">
-                    <div class="items">
-			<div class="product">
-                            <div class="row">
-				<div class="col-md-3">
-                                    <img class="img-fluid mx-auto d-block image" src="Image/ladiesmain.jpg">
-				</div>
-				<div class="col-md-8">
-                                    <div class="info">
-					<div class="row">
-                                            <div class="col-md-5 product-name">
-						<div class="product-name">
-                                                    <a href="#">Lorem Ipsum dolor</a>
-                                                    <div class="product-info">
-                                                    <div>Price: <span class="value">#</span></div>
-                                                    <div>Size: <span class="value">#</span></div>
-                                                    </div>
-						</div>
-                                            </div>
-                                                <div class="col-md-4 quantity">
-                                                    <label for="quantity">Quantity:</label>
-                                                    <input id="quantity" type="number" value ="1" class="form-control quantity-input">
-                                                </div>
-                                            <div class="col-md-3 price">
-                                                <span>$120</span>
-                                            </div>
-                                        </div>
-                                    </div>
-				</div>
-                            </div>
-			</div>
-			<div class="product">
-                            <div class="row">
-				<div class="col-md-3">
-                                    <img class="img-fluid mx-auto d-block image" src="Image/gentsmain.jpg">
-				</div>
-				<div class="col-md-8">
-                                    <div class="info">
-					<div class="row">
-                                            <div class="col-md-5 product-name">
-						<div class="product-name">
-                                                    <a href="#">Lorem Ipsum dolor</a>
-							<div class="product-info">
-                                                            <div>Price: <span class="value">#</span></div>
-                                                            <div>Size: <span class="value">#</span></div>
-							</div>
-						</div>
-                                            </div>
-                                            <div class="col-md-4 quantity">
-						<label for="quantity">Quantity:</label>
-                                                    <input id="quantity" type="number" value ="1" class="form-control quantity-input">
-                                            </div>
-                                            <div class="col-md-3 price">
-						<span>$120</span>
-                                            </div>
-					</div>
-                                    </div>
-				</div>
-                            </div>
-			</div>
-			<div class="product">
-                           <div class="row">
-				<div class="col-md-3">
-                                    <img class="img-fluid mx-auto d-block image" src="Image/13245.jpg">
-				</div>
-                            <div class="col-md-8">
-				<div class="info">
-                                    <div class="row">
-					<div class="col-md-5 product-name">
-                                            <div class="product-name">
-						<a href="#">shirt</a>
-						<div class="product-info">
-                                                    <div>Price: <span class="value">#</span></div>
-                                                    <div>Size: <span class="value">#</span></div>
-						</div>
-                                            </div>
-					</div>
-					<div class="col-md-4 quantity">
-                                            <label for="quantity">Quantity:</label>
-						<input id="quantity" type="number" value ="1" class="form-control quantity-input">
-					</div>
-					<div class="col-md-3 price">
-					<span>$120</span>
-					</div>
-                                    </div>
-				</div>
-                            </div>
-                          </div>
-			</div>
-                    </div>
-		</div>
-		<div class="col-md-12 col-lg-4">
-                    <div class="summary">
-			 <h3>Summary</h3>
-                            <div class="summary-item"><span class="text">Subtotal</span><span class="price">Rs360</span></div>
-                            
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button> 
-                    </div>
-		</div>
-            </div> 
-	</div>
-      </div>
-  </section>
-</main>
-
-
+        <div class="navbar">
+                <div class="logo">
+                    <img src="Image/Logo.jpg" width="50" height="40"> 
+                </div>
+            <nav>
+                <ul>
+                    <li><a href="home.jsp">Home</a></li>
+                    <li><a href="ladiessec.jsp">Ladies Section</a></li>
+                    <li><a href="gentssec.jsp">Gents Section</a></li>
+                    <li><a href="kidssec.jsp">Kids Section</a></li>
+                    <li class="rightcorner"><a href="profile.jsp">Profile</a></li>
+                    <li class="rightcorner"><a href="index.jsp">Logout</a></li>
+                    <li class="rightcorner"><a href="cart.jsp">Cart</a></li>
+                    <li class="rightcorner"><a href="search.jsp">Search</a></li>
+                </ul>
+            </nav> 
+            </div>
         
-</body>
+        <div class="container">
+                <div class="row">
+                        <div class="col-xs-8">
+                                <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                                <div class="panel-title">
+                                                        <div class="row">
+                                                                <div class="col-xs-6">
+                                                                        <h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
+                                                                </div>
+                                                                <div class="col-xs-6">
+                                                                        <button type="button" class="btn btn-primary btn-sm btn-block">
+                                                                                <span class="glyphicon glyphicon-share-alt"></span> Continue shopping
+                                                                        </button>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="panel-body">
+                                                <div class="row">
+                                                        <div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
+                                                        </div>
+                                                        <div class="col-xs-4">
+                                                                <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                                <div class="col-xs-6 text-right">
+                                                                        <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                        <input type="text" class="form-control input-sm" value="1">
+                                                                </div>
+                                                                <div class="col-xs-2">
+                                                                        <button type="button" class="btn btn-link btn-xs">
+                                                                                <span class="glyphicon glyphicon-trash"> </span>
+                                                                        </button>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                        <div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
+                                                        </div>
+                                                        <div class="col-xs-4">
+                                                                <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                                <div class="col-xs-6 text-right">
+                                                                        <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                        <input type="text" class="form-control input-sm" value="1">
+                                                                </div>
+                                                                <div class="col-xs-2">
+                                                                        <button type="button" class="btn btn-link btn-xs">
+                                                                                <span class="glyphicon glyphicon-trash"> </span>
+                                                                        </button>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                        <div class="text-center">
+                                                                <div class="col-xs-9">
+                                                                        <h6 class="text-right">Added items?</h6>
+                                                                </div>
+                                                                <div class="col-xs-3">
+                                                                        <button type="button" class="btn btn-default btn-sm btn-block">
+                                                                                Update cart
+                                                                        </button>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="panel-footer">
+                                                <div class="row text-center">
+                                                        <div class="col-xs-9">
+                                                                <h4 class="text-right">Total <strong>Rs50.00</strong></h4>
+                                                        </div>
+                                                        <div class="col-xs-3">
+                                                            <button type="button" class="btn btn-success btn-block"><a href="checkout.jsp">Checkout</a></button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+    </body>
 </html>

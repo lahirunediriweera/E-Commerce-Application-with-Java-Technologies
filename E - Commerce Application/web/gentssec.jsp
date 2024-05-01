@@ -1,110 +1,65 @@
-<%-- 
-    Document   : mensec
-    Created on : Apr 7, 2024, 12:36:04 AM
-    Author     : USER
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
+<%@ page import="java.sql.*" %>
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Mens Section</title>
-        <!--custom CSS-->
-        <link href="CSS/gentssec.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">
-            
-        <!--Nav Bar-->
-            <div class="navbar">
-                <div class="logo">
-                    <img src="Image/Logo.jpg" width="50" height="40"> 
-                </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Ladies Section</a></li>
-                    <li><a href="#">Gents Section</a></li>
-                    <li><a href="#">Kids Section</a></li>                                             
-                    <li class="rightcorner"><a href="">Register</a></li>
-                    <li class="rightcorner"><a href="login.jsp">Login</a></li>
-                    <li class="rightcorner"><a href="#">Cart</a></li>
-                    <li class="rightcorner"><a href="#">Search</a></li>
-                </ul>
-            </nav> 
-            </div>
-            
-        <!--poster-->
-        <div class="men">
-        <div class="poster">
-            <h1>Mens<span>Fashion</span></h1>
-        </div>
-            <div class="mens">
-            <div class="men casual">
-                <h2>Casual Outfit</h2>
-                <div class="mens_box">
-                    <div class="mens_card">
-                        <div class="mens_image">
-                            <% session.setAttribute("Image", request.getParameter("Image")); %>
-                        </div>
-                        <div class="mens_info">
-                            <h2><%session.setAttribute("Description", request.getParameter("Description"));%></h2>
-                        
-                            <h3><%session.setAttribute("Price",request.getParameter("Price"));%></h3>
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                            <a href="#" class="menu_btn">Order Now</a>
-                    </div>
-                    
-                </div>.
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Mens Section</title>
+    <!-- Custom CSS -->
+   <link href="CSS/gentssec.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!--Header-->
+        <!-- Poster -->
+        <div class="mens">
+            <div class="poster">
                 
-                    <div class="mens_card">
-                        <div class="mens_image">
-                            <% session.setAttribute("Image", request.getParameter("Image")); %>
-                        </div>
-                            <div class="mens_info">
-                            <h2><%session.setAttribute("Description", request.getParameter("Description"));%></h2>
+            </div>
+            <!-- mens Section -->
+            <div class="men">
+                 <h2>Men Fashion</h2>
+                    <div class="mens_box">
                         
-                            <h3><%session.setAttribute("Price",request.getParameter("Price"));%></h3>
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                            <a href="#" class="menu_btn">Order Now</a>
+                        <%
+                String url = "jdbc:mysql://localhost:3306/bloomshop";
+                String query = "SELECT * FROM gents";
+                
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection con = DriverManager.getConnection(url, "root", "");
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(query);
+                
+                while(rs.next()) { %>
+                        
+                        <!-- First card -->
+                        <div class="mens_card">
+                            <div class="mens_image">
+                                <img src="<%=rs.getString("image")%>" alt="Product Image" style="width:100px;height:100px">
                             </div>
-                    
-                    </div>
-                    <div class="mens_card">
-                        <div class="mens_image">
-                            <% session.setAttribute("Image", request.getParameter("Image")); %>
+                            <div class="mens_info">
+                                <p><%=rs.getString("description")%></p>
+                                <h3><%=rs.getString("name")%></h3>
+                                <div class="btn-group">
+                                    <a href="#" class="cart_btn">Add to Cart</a>
+                                    <a href="#" class="order_btn">Order Now</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mens_info">
-                            <h2><%session.setAttribute("Description", request.getParameter("Description"));%></h2>
-                        
-                            <h3><%session.setAttribute("Price",request.getParameter("Price"));%></h3>
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                            <a href="#" class="menu_btn">Order Now</a>
+                                
+                      <% } %>
+                       
                     </div>
-                    
-                    </div>
-                    <div class="mens_card">
-                        <div class="mens_image">
-                            <% session.setAttribute("Image", request.getParameter("Image")); %>
-                        </div>
-                        <div class="mens_info">
-                            <h2><%session.setAttribute("Description", request.getParameter("Description"));%></h2>
-                        
-                            <h3><%session.setAttribute("Price",request.getParameter("Price"));%></h3>
-                            <a href="#" class="cart_btn">Add to Cart</a>
-                            <a href="#" class="menu_btn">Order Now</a>
-                    </div>
-                    
-                </div>                            
-                            
                 </div>
             </div>
-            
-        </div>
-            
-            
-        </div>
+                      <!--Footer-->
+                      <jsp:include page="footer.jsp" />
         </div>
     </body>
 </html>

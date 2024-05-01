@@ -46,7 +46,7 @@
                 
                 while(rs.next()) { %>
                         
-                        <!-- First card -->
+                        
                         <div class="kids_card">
                             <div class="kids_image">
                                 <img src="Image/<%=rs.getString("image")%>" alt="Product Image" style="width:100px;height:100px">

@@ -57,8 +57,8 @@
                                  <h3>Rs <%=rs.getString("price")%>.00</h3>
                                   <h3>Available only <%=rs.getString("quantity")%> units</h3>
                                 <div class="btn-group">
-                                    <a href="#" class="cart_btn">Add to Cart</a>
-                                    <a href="#" class="order_btn">Order Now</a>
+                                    <a href="cart.jsp" class="cart_btn">Add to Cart</a>
+                                    <a href="checkout.jsp" class="order_btn">Order Now</a>
                                 </div>
                             </div>
                         </div>

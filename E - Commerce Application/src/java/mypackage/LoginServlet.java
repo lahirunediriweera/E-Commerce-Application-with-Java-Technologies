@@ -95,7 +95,7 @@ public class LoginServlet extends HttpServlet {
             try {
                 Class.forName(driver);
                 Connection con = DriverManager.getConnection(url, "root", "");
-                String query = "SELECT pwd FROM user WHERE email = ?";
+                String query = "SELECT pwd FROM customer WHERE email = ?";
                 PreparedStatement ps = con.prepareStatement(query);
                 ps.setString(1, email);
                 ResultSet rs = ps.executeQuery();

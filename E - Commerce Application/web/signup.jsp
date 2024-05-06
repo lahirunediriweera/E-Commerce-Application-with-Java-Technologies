@@ -51,7 +51,7 @@
                         <span style="display: none;">Both the password does not match</span></td>
                     </tr>
                     <tr> 
-                        <td><input type="submit" value="Register" id="submit" /></td>
+                        <td><input type="submit" value="Register-Now" id="submit" /></td>
                         <td><input type="reset" value="Cancel" id="reset" /></td>
                        
                     </tr>

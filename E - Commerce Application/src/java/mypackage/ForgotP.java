@@ -22,7 +22,7 @@ class ForgotP {
     void insertDetails(String email,String Npwd,String Cpwd)
          
     {
-        query = "INSERT INTO user VALUES("+email+",'"+Npwd+"','"+Cpwd+"')";
+        query = "INSERT INTO customer VALUES("+email+",'"+Npwd+"','"+Cpwd+"')";
         
         connectToDB();
         try{

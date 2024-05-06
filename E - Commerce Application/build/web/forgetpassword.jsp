@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="forgetpassword.css">
+        <link rel="stylesheet" href="CSS/forgetpassword.css">
         <title>Forgot Password</title>
     </head>
     <body>    

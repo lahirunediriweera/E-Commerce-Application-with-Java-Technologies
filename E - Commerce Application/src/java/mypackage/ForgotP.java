@@ -40,7 +40,7 @@ class ForgotP {
 
     private void connectToDB() {
         String driver= "com.mysql.jdbc.Driver";
-        String url="jdbc:mysql://localhost:3306/userDB";
+        String url="jdbc:mysql://localhost:3306/bloomshop";
         try {
             Class.forName(driver);
             Connection con=DriverManager.getConnection(url,"root","");

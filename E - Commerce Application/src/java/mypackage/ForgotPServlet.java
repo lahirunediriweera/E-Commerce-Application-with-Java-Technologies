@@ -76,7 +76,7 @@ public class ForgotPServlet extends HttpServlet {
             throws ServletException, IOException {
         
         String email=request.getParameter("email");
-        String Npwd=request.getParameter("NPassword");
+        String pwd=request.getParameter("NPassword");
         String Cpwd=request.getParameter("CPassword");
         
         
@@ -98,15 +98,15 @@ public class ForgotPServlet extends HttpServlet {
                 }
             }
         
-        if(Npwd== null || Npwd.length()== 0 || Npwd.equals(" ")){
+        if(pwd== null || pwd.length()== 0 || pwd.equals(" ")){
             out.println("<h4 style='color:red'> Password is required.</h4>");
             return;
         }
-        else if(Npwd.length()<8){
+        else if(pwd.length()<8){
             out.println("<h4 style='color:red'> Password must have minimum 8 characters.</h4>");
             return;
         }
-        else if(Npwd.length()>15){
+        else if(pwd.length()>15){
             out.println("<h4 style='color:red'> Password must have maximum 15 characters.</h4>");
             return;
         }
@@ -123,7 +123,7 @@ public class ForgotPServlet extends HttpServlet {
         
     
        ForgotP fp= new ForgotP();
-       fp.insertDetails(email,Npwd,Cpwd);
+       fp.insertDetails(email,pwd,Cpwd);
        // processRequest(request, response);
     }
 

@@ -76,8 +76,8 @@ public class ForgotPServlet extends HttpServlet {
             throws ServletException, IOException {
         
         String email=request.getParameter("email");
-        String Npwd=request.getParameter("NPassword");
-        String Cpwd=request.getParameter("CPassword");
+        String pwd=request.getParameter("NPassword");
+        String cpwd=request.getParameter("CPassword");
         
         
         if(email== null || email.length()== 0 || email.equals(" ")){
@@ -98,32 +98,32 @@ public class ForgotPServlet extends HttpServlet {
                 }
             }
         
-        if(Npwd== null || Npwd.length()== 0 || Npwd.equals(" ")){
+        if(pwd== null || pwd.length()== 0 || pwd.equals(" ")){
             out.println("<h4 style='color:red'> Password is required.</h4>");
             return;
         }
-        else if(Npwd.length()<8){
+        else if(pwd.length()<8){
             out.println("<h4 style='color:red'> Password must have minimum 8 characters.</h4>");
             return;
         }
-        else if(Npwd.length()>15){
+        else if(pwd.length()>15){
             out.println("<h4 style='color:red'> Password must have maximum 15 characters.</h4>");
             return;
         }
         
         //Validate Comfirm Password
-        if(Cpwd== null || Cpwd.length()== 0 || Cpwd.equals(" ")){
+        if(cpwd== null || cpwd.length()== 0 || cpwd.equals(" ")){
             out.println("<h4 style='color:red'> Enter the password again</h4>");
             return;
         }
-        else if(!Cpwd.equals(Cpwd)){
+        else if(!cpwd.equals(cpwd)){
             out.println("<h4 style='color:red'> Confirm password is does not match</h4>");
             return;           
         } 
         
     
        ForgotP fp= new ForgotP();
-       fp.insertDetails(email,Npwd,Cpwd);
+       fp.insertDetails(email,pwd,cpwd);
        // processRequest(request, response);
     }
 

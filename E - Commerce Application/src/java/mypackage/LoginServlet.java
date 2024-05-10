@@ -91,7 +91,7 @@ public class LoginServlet extends HttpServlet {
          try{
         if (email != null && pwd != null) {
             String driver= "com.mysql.jdbc.Driver";
-            String url="jdbc:mysql://localhost:3306/userdb";
+            String url="jdbc:mysql://localhost:3306/bloomshop";
             try {
                 Class.forName(driver);
                 Connection con = DriverManager.getConnection(url, "root", "");

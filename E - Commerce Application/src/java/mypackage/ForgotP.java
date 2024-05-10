@@ -19,10 +19,10 @@ import java.util.logging.Logger;
 class ForgotP {
     PreparedStatement ps; 
     String query;
-    void insertDetails(String email,String pwd,String Cpwd)
+    void insertDetails(String email,String pwd,String cpwd)
          
     {
-        query = "INSERT INTO customer VALUES("+email+",'"+pwd+"','"+Cpwd+"')";
+        query = "INSERT INTO customer VALUES("+email+",'"+pwd+"','"+cpwd+"')";
         
         connectToDB();
         try{
@@ -30,7 +30,7 @@ class ForgotP {
            
            ps.setString(1, email);
            ps.setString(2, pwd);
-           ps.setString(3, Cpwd);
+           ps.setString(3, cpwd);
         }
         catch(SQLException ex)
         {

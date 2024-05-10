@@ -77,7 +77,7 @@ public class ForgotPServlet extends HttpServlet {
         
         String email=request.getParameter("email");
         String pwd=request.getParameter("NPassword");
-        String Cpwd=request.getParameter("CPassword");
+        String cpwd=request.getParameter("CPassword");
         
         
         if(email== null || email.length()== 0 || email.equals(" ")){
@@ -112,18 +112,18 @@ public class ForgotPServlet extends HttpServlet {
         }
         
         //Validate Comfirm Password
-        if(Cpwd== null || Cpwd.length()== 0 || Cpwd.equals(" ")){
+        if(cpwd== null || cpwd.length()== 0 || cpwd.equals(" ")){
             out.println("<h4 style='color:red'> Enter the password again</h4>");
             return;
         }
-        else if(!Cpwd.equals(Cpwd)){
+        else if(!cpwd.equals(cpwd)){
             out.println("<h4 style='color:red'> Confirm password is does not match</h4>");
             return;           
         } 
         
     
        ForgotP fp= new ForgotP();
-       fp.insertDetails(email,pwd,Cpwd);
+       fp.insertDetails(email,pwd,cpwd);
        // processRequest(request, response);
     }
 
